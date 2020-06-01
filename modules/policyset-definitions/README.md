@@ -1,10 +1,12 @@
 # AzureRM PolicySet Definitions - Terraform child module
+
 * Vendor reference [https://www.terraform.io/docs/providers/azurerm/r/policy_set_definition.html](https://www.terraform.io/docs/providers/azurerm/r/policy_set_definition.html)
 
 ## Module files
-* main.tf
-* outputs.tf
-* variables.tf
+
+* `main.tf`
+* `outputs.tf`
+* `variables.tf`
 
 ## Resources (main.tf)
 
@@ -37,7 +39,6 @@
 | `auditRoleAssignmentType_user_policy_id` | The policy definition id for auditRoleAssignmentType_user | `string` | null
 | `auditLockOnNetworking_policy_id` | The policy definition id for auditLockOnNetworking | `string` | null
 
-
 ## Output variables (outputs.tf)
 
 | Name | Description | Value
@@ -46,4 +47,3 @@
 | `iam_governance_policyset_id` | The policy set definition id for iam_governance | ${azurerm_policy_set_definition.iam_governance.id}
 | `security_governance_policyset_id` | The policy set definition id for security_governance | ${azurerm_policy_set_definition.security_governance.id}
 | `data_protection_governance_policyset_id` | The policy set definition id for data_protection_governance | ${azurerm_policy_set_definition.data_protection_governance.id}
-

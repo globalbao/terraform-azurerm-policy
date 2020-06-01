@@ -1,10 +1,12 @@
 # AzureRM Policy - Terraform parent module
+
 * Vendor reference [https://www.terraform.io/docs/providers/azurerm/index.html](https://www.terraform.io/docs/providers/azurerm/index.html)
 
 ## Module files
-* main.tf
-* outputs.tf
-* variables.tf
+
+* `main.tf`
+* `outputs.tf`
+* `variables.tf`
 
 ## Resources (main.tf)
 
@@ -27,12 +29,12 @@
 
 ## Input variables (variables.tf)
 
-| Name             | Description                           | Type     | Default Value
-|:---------------  |:--------------------------------------|:---------|:--------------
-| subscription_id  | Your Azure Subscription ID            | `string` | null
-| client_id        | Your Azure Service Principal appId    | `string` | null
-| client_secret    | Your Azure Service Principal Password | `string` | null
-| tenant_id        | Your Azure Tenant ID                  | `string` | null
+| Name               | Description                           | Type     | Default Value
+|:-------------------|:--------------------------------------|:---------|:--------------
+| `subscription_id`  | Your Azure Subscription ID            | `string` | null
+| `client_id`        | Your Azure Service Principal appId    | `string` | null
+| `client_secret`    | Your Azure Service Principal Password | `string` | null
+| `tenant_id`        | Your Azure Tenant ID                  | `string` | null
 
 ## Output variables (outputs.tf)
 

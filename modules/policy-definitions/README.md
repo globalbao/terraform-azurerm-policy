@@ -1,12 +1,13 @@
 # AzureRM Policy Definitions - Terraform child module
+* Vendor reference [https://www.terraform.io/docs/providers/azurerm/r/policy_definition.html](https://www.terraform.io/docs/providers/azurerm/r/policy_definition.html)
 
 ## Module files
-* main.tf
-* outputs.tf
-* variables.tf
+
+* `main.tf`
+* `outputs.tf`
+* `variables.tf`
 
 ## Resources (main.tf)
-* Vendor reference [https://www.terraform.io/docs/providers/azurerm/r/policy_definition.html](https://www.terraform.io/docs/providers/azurerm/r/policy_definition.html)
 
 | Resource Type             | Resource name                  | Deployment Count
 |:--------------------------|:-------------------------------|:----------------
@@ -16,7 +17,6 @@
 | azurerm_policy_definition | `bulkInheritTagsFromRG`        | 1
 | azurerm_policy_definition | `auditRoleAssignmentType_user` | 1
 | azurerm_policy_definition | `auditLockOnNetworking`        | 1
-
 
 ## Input variables (variables.tf)
 

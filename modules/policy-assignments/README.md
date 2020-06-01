@@ -1,10 +1,12 @@
 # AzureRM Policy Assignments - Terraform child module
+
 * Vendor reference [https://www.terraform.io/docs/providers/azurerm/r/policy_assignment.html](https://www.terraform.io/docs/providers/azurerm/r/policy_assignment.html)
 
 ## Module files
-* main.tf
-* outputs.tf
-* variables.tf
+
+* `main.tf`
+* `outputs.tf`
+* `variables.tf`
 
 ## Resources (main.tf)
 
@@ -14,7 +16,6 @@
 | azurerm_policy_assignment | `iam_governance` | 1
 | azurerm_policy_assignment | `security_governance` | 1
 | azurerm_policy_assignment | `data_protection_governance` | 1
-
 
 ## Input variables (variables.tf)
 
@@ -35,4 +36,3 @@
 | `security_governance_assignment_id` | The policy assignment id for security_governance | ${azurerm_policy_assignment.security_governance.id}
 | `security_governance_assignment_identity` | The policy assignment identity for security_governance | ${azurerm_policy_assignment.security_governance.identity}
 | `data_protection_governance_assignment_id` | The policy assignment id for data_protection_governance | ${azurerm_policy_assignment.data_protection_governance.id}
-

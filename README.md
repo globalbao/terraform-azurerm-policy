@@ -2,8 +2,9 @@
 
 * Vendor reference [https://www.terraform.io/docs/providers/azurerm/index.html](https://www.terraform.io/docs/providers/azurerm/index.html)
 
-
 ## Example Usage
+
+### Pre-Reqs
 
 * Setup a new Azure [service principal](https://www.terraform.io/docs/providers/azurerm/guides/service_principal_client_secret.html) to your subscription for terraform to use.
 * Assign the ["Resource Policy Contributor"](https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#resource-policy-contributor) built-in role for least amount of privileges required.
@@ -13,8 +14,6 @@ az login
 az account list
 az account set --subscription="XXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXX"
 az ad sp create-for-rbac --name "Terraform-AzureRM-Policy" --role="Resource Policy Contributor" --scopes="/subscriptions/XXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXX"
-# delete/cleanup azure service principal
-# az ad sp delete --id "<appId>"
 ```
 
 * Store your Azure service principal credentials as per below in a .tfvars file e.g. .\workspaces\subscriptionName\subscriptionName.tfvars to call when using terraform plan/apply.
@@ -28,7 +27,7 @@ client_secret   = "your service principal password"
 
 * If changes are made to .tf files it's best practice to use terraform fmt/validate.
 
-```terraform
+```terraform 
 terraform fmt -recursive
 terraform validate
 ```
@@ -40,12 +39,12 @@ terraform validate
 terraform workspace new subscriptionName ".\workspaces\subscriptionName"
 terraform workspace list
 ```
+### Plan/Apply
 
 * Run parent module within workspace context using Azure service principal credentials in subscriptionName.tfvars
 * Assumes current working directory is .\terraform-azurerm-policy.
 
 ```terraform
-az logout
 terraform init
 terraform workspace select subscriptionName
 terraform workspace show
@@ -53,6 +52,8 @@ terraform plan -out=".\workspaces\subscriptionName\tfplan" -var-file=".\workspac
 terraform apply ".\workspaces\subscriptionName\tfplan"
 terraform apply -auto-approve -var-file=".\workspaces\subscriptionName\subscriptionName.tfvars"
 ```
+
+### Cleanup
 
 * Delete/remove all created terraform resources
 

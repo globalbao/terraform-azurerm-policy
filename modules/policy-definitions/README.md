@@ -1,4 +1,5 @@
 # AzureRM Policy Definitions - Terraform child module
+
 * Vendor reference [https://www.terraform.io/docs/providers/azurerm/r/policy_definition.html](https://www.terraform.io/docs/providers/azurerm/r/policy_definition.html)
 
 ## Module files

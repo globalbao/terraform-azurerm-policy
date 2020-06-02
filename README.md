@@ -69,7 +69,7 @@ terraform destroy -var-file=".\workspaces\subscriptionName\subscriptionName.tfva
 az login
 az account list
 az account set --subscription="XXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXX"
-# az ad sp delete --id "<appId>"
+az ad sp delete --id "<appId>"
 ```
 
 ## Module files

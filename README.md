@@ -27,7 +27,7 @@ client_secret   = "your service principal password"
 
 * If changes are made to .tf files it's best practice to use terraform fmt/validate.
 
-```terraform 
+```terraform
 terraform fmt -recursive
 terraform validate
 ```
@@ -50,7 +50,7 @@ terraform workspace select subscriptionName
 terraform workspace show
 terraform plan -out=".\workspaces\subscriptionName\tfplan" -var-file=".\workspaces\subscriptionName\subscriptionName.tfvars"
 terraform apply ".\workspaces\subscriptionName\tfplan"
-terraform apply -auto-approve -var-file=".\workspaces\subscriptionName\subscriptionName.tfvars"
+terraform apply -var-file=".\workspaces\subscriptionName\subscriptionName.tfvars"
 ```
 
 ### Cleanup

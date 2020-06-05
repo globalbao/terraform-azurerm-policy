@@ -1,5 +1,5 @@
 resource "azurerm_policy_definition" "addTagToRG" {
-  count = "${length(var.mandatory_tag_keys)}"
+  count = length(var.mandatory_tag_keys)
 
   name         = "addTagToRG_${var.mandatory_tag_keys[count.index]}"
   policy_type  = "Custom"
@@ -72,7 +72,7 @@ PARAMETERS
 }
 
 resource "azurerm_policy_definition" "inheritTagFromRG" {
-  count = "${length(var.mandatory_tag_keys)}"
+  count = length(var.mandatory_tag_keys)
 
   name         = "inheritTagFromRG_${var.mandatory_tag_keys[count.index]}"
   policy_type  = "Custom"

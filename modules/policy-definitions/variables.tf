@@ -1,5 +1,5 @@
 variable "mandatory_tag_keys" {
-  type        = "list"
+  type        = list
   description = "List of mandatory tag keys used by policies 'addTagToRG','inheritTagFromRG','bulkAddTagsToRG','bulkInheritTagsFromRG'"
   default = [
     "Application",
@@ -13,13 +13,13 @@ variable "mandatory_tag_keys" {
 }
 
 variable "mandatory_tag_value" {
-  type        = "string"
+  type        = string
   description = "Tag value to include with the mandatory tag keys used by policies 'addTagToRG','inheritTagFromRG','bulkAddTagsToRG','bulkInheritTagsFromRG'"
   default     = "to_be_confirmed"
 }
 
 variable "policy_definition_category" {
-  type        = "string"
+  type        = string
   description = "The category to use for all Policy Definitions"
   default     = "Custom"
 }

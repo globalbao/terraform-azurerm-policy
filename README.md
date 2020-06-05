@@ -180,6 +180,7 @@ terraform workspace list
 
 ```terraform
 terraform init
+terraform workspace list
 terraform workspace select subscriptionName1
 terraform workspace show
 terraform plan -var-file=".\workspaces\subscriptionName1\subscriptionName1.tfvars"

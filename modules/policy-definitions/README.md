@@ -2,13 +2,13 @@
 
 * Vendor reference [https://www.terraform.io/docs/providers/azurerm/r/policy_definition.html](https://www.terraform.io/docs/providers/azurerm/r/policy_definition.html)
 
-## Module files
+## Terraform child module files
 
 * `main.tf`
 * `outputs.tf`
 * `variables.tf`
 
-## Resources (main.tf)
+## Terraform resources (main.tf)
 
 | Resource Type             | Resource name                  | Deployment Count
 |:--------------------------|:-------------------------------|:----------------
@@ -19,7 +19,7 @@
 | azurerm_policy_definition | `auditRoleAssignmentType_user` | 1
 | azurerm_policy_definition | `auditLockOnNetworking`        | 1
 
-## Input variables (variables.tf)
+## Terraform input variables (variables.tf)
 
 | Name            | Description | Type | Default Value
 |:----------------|:------------|:-----|:---------
@@ -27,7 +27,7 @@
 | `mandatory_tag_value` | Tag value to include with the mandatory tag keys used by policies 'addTagToRG','inheritTagFromRG','bulkAddTagsToRG','bulkInheritTagsFromRG' | `string` | "to_be_confirmed"
 | `policy_definition_category` | The category to use for all Policy Definitions | `string` | "Custom"
 
-## Output variables (outputs.tf)
+## Terraform output variables (outputs.tf)
 
 | Name | Description | Value
 |:-------|:-----------|:----------

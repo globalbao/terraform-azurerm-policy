@@ -2,13 +2,13 @@
 
 * Vendor reference [https://www.terraform.io/docs/providers/azurerm/r/policy_set_definition.html](https://www.terraform.io/docs/providers/azurerm/r/policy_set_definition.html)
 
-## Module files
+## Terraform child module files
 
 * `main.tf`
 * `outputs.tf`
 * `variables.tf`
 
-## Resources (main.tf)
+## Terraform resources (main.tf)
 
 | Resource Type | Resource name | Deployment Count
 |:--------------|:--------------|:----------------
@@ -17,7 +17,7 @@
 | azurerm_policy_set_definition | `security_governance` | 1
 | azurerm_policy_set_definition | `data_protection_governance` | 1
 
-## Input variables (variables.tf)
+## Terraform input variables (variables.tf)
 
 | Name | Description | Type | Default Value
 |:------|:-------------|:------|:---------
@@ -39,7 +39,7 @@
 | `auditRoleAssignmentType_user_policy_id` | The policy definition id for auditRoleAssignmentType_user | `string` | null
 | `auditLockOnNetworking_policy_id` | The policy definition id for auditLockOnNetworking | `string` | null
 
-## Output variables (outputs.tf)
+## Terraform output variables (outputs.tf)
 
 | Name | Description | Value
 |:-------|:-----------|:----------

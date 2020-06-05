@@ -191,7 +191,6 @@ terraform apply -var-file=".\workspaces\subscriptionName1\subscriptionName1.tfva
 * Delete/remove all created terraform resources
 
 ```azurecli
-# AuthN to Azure and set your subscription
 az login
 az account list
 az account set --subscription="XXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXX"

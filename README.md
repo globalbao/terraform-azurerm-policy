@@ -209,7 +209,7 @@ terraform init
 terraform workspace list
 terraform workspace select subscriptionName1
 terraform workspace show
-terraform destroy -var-file=".\workspaces\subscriptionName\subscriptionName.tfvars"
+terraform destroy -var-file=".\workspaces\subscriptionName1\subscriptionName1.tfvars"
 ```
 
 ### Delete your Azure service principal if not needed

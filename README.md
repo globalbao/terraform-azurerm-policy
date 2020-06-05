@@ -29,6 +29,8 @@
 
 ## Terraform input variables (variables.tf)
 
+* Usable if you have setup an Azure service principal for authentication as per example usage instructions below.
+
 | Name               | Description                           | Type     | Default Value
 |:-------------------|:--------------------------------------|:---------|:--------------
 | `subscription_id`  | Your Azure Subscription ID            | `string` | null
@@ -163,7 +165,7 @@ client_secret   = "your service principal password"
 
 ### Create multiple terraform workspaces
 
-* You can create multiple workspaces if you need to maintain multiple .tfstate files/
+* You can create multiple workspaces if you need to maintain multiple .tfstate files.
 * Note: the workspace folder paths must exist prior to running terraform workspace cmds below.
 
 ```terraform
@@ -184,7 +186,7 @@ terraform plan -var-file=".\workspaces\subscriptionName1\subscriptionName1.tfvar
 terraform apply -var-file=".\workspaces\subscriptionName1\subscriptionName1.tfvars"
 ```
 
-### Delete/remove all created terraform resources
+### Delete all created terraform resources
 
 * Delete/remove all created terraform resources
 
@@ -200,7 +202,7 @@ terraform init
 terraform destroy
 ```
 
-### Delete/remove all created terraform resources using a workspace and .tfvars
+### Delete all created terraform resources using a workspace and .tfvars
 
 ```terraform
 terraform init
@@ -210,7 +212,7 @@ terraform workspace show
 terraform destroy -var-file=".\workspaces\subscriptionName\subscriptionName.tfvars"
 ```
 
-### Delete/cleanup your Azure service principal if not needed
+### Delete your Azure service principal if not needed
 
 ```azurecli
 az login

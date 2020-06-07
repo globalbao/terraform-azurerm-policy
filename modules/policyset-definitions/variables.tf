@@ -121,7 +121,7 @@ variable "security_policyset_definitions" {
   type        = list
   description = "List of policy definitions (display names) for the security_governance policyset"
   default = [
-    "Internet-facing virtual machines should be protected with Network Security Groups",
+    "Internet-facing virtual machines should be protected with network security groups",
     "Subnets should be associated with a Network Security Group",
     "Gateway subnets should not be configured with a network security group",
     "Storage accounts should restrict network access",

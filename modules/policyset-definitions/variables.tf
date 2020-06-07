@@ -84,3 +84,68 @@ variable "auditLockOnNetworking_policy_id" {
   description = "The policy definition id for auditLockOnNetworking"
 }
 
+data "azurerm_policy_definition" "iam_policyset_definitions" {
+  count        = length(var.iam_policyset_definitions)
+  display_name = var.iam_policyset_definitions[count.index]
+}
+
+data "azurerm_policy_definition" "security_policyset_definitions" {
+  count        = length(var.security_policyset_definitions)
+  display_name = var.security_policyset_definitions[count.index]
+}
+
+data "azurerm_policy_definition" "data_protection_policyset_definitions" {
+  count        = length(var.data_protection_policyset_definitions)
+  display_name = var.data_protection_policyset_definitions[count.index]
+}
+
+variable "iam_policyset_definitions" {
+  type        = list
+  description = "List of policy definitions (display names) for the iam_governance policyset"
+  default = [
+    "Audit usage of custom RBAC rules",
+    "Custom subscription owner roles should not exist",
+    "Deprecated accounts should be removed from your subscription",
+    "Deprecated accounts with owner permissions should be removed from your subscription",
+    "External accounts with write permissions should be removed from your subscription",
+    "External accounts with read permissions should be removed from your subscription",
+    "External accounts with owner permissions should be removed from your subscription",
+    "MFA should be enabled accounts with write permissions on your subscription",
+    "MFA should be enabled on accounts with owner permissions on your subscription",
+    "MFA should be enabled on accounts with read permissions on your subscription",
+    "There should be more than one owner assigned to your subscription"
+  ]
+}
+
+variable "security_policyset_definitions" {
+  type        = list
+  description = "List of policy definitions (display names) for the security_governance policyset"
+  default = [
+    "Internet-facing virtual machines should be protected with Network Security Groups",
+    "Subnets should be associated with a Network Security Group",
+    "Gateway subnets should not be configured with a network security group",
+    "Storage accounts should restrict network access",
+    "Secure transfer to storage accounts should be enabled",
+    "Access through Internet facing endpoint should be restricted",
+    "Storage accounts should allow access from trusted Microsoft services",
+    "RDP access from the Internet should be blocked",
+    "SSH access from the Internet should be blocked",
+    "Disk encryption should be applied on virtual machines",
+    "Automation account variables should be encrypted",
+    "Azure subscriptions should have a log profile for Activity Log",
+    "Email notification to subscription owner for high severity alerts should be enabled",
+    "A security contact email address should be provided for your subscription",
+    "Enable Azure Security Center on your subscription"
+  ]
+}
+
+variable "data_protection_policyset_definitions" {
+  type        = list
+  description = "List of policy definitions (display names) for the data_protection_governance policyset"
+  default = [
+    "Azure Backup should be enabled for Virtual Machines",
+    "Long-term geo-redundant backup should be enabled for Azure SQL Databases",
+    "Audit virtual machines without disaster recovery configured",
+    "Key Vault objects should be recoverable"
+  ]
+}

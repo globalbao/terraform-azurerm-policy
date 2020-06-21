@@ -2,7 +2,7 @@
 
 * Vendor reference [https://www.terraform.io/docs/providers/azurerm/index.html](https://www.terraform.io/docs/providers/azurerm/index.html)
 
-![Terraform AzurePolicy Modules HLD](https://github.com/globalbao/terraform-azurerm-policy/tree/master/images/terraform-azurepolicy-modules-hld.PNG)
+![Terraform AzurePolicy Modules HLD](https://github.com/globalbao/terraform-azurerm-policy/tree/master/images/terraform-azurepolicy-modules-hld.png)
 
 ## Terraform parent module files
 

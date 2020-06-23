@@ -2,6 +2,8 @@
 ![Lint Terraform](https://github.com/globalbao/terraform-azurerm-policy/workflows/Lint%20Terraform/badge.svg)
 * Vendor reference [https://www.terraform.io/docs/providers/azurerm/index.html](https://www.terraform.io/docs/providers/azurerm/index.html)
 
+![ModuleLayout](https://github.com/globalbao/terraform-azurerm-policy/blob/master/images/terraform-azurepolicy-modulelayout.png?raw=true)
+
 ## Terraform parent module files
 
 * `main.tf`

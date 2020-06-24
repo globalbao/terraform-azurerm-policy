@@ -1,8 +1,8 @@
 # Terraform Pattern: Using count and count.index with an Azure Policy Definition resource
 
-## Requirements
-* We need to deploy an Terraform resource (AzureRM Policy Definition) multiple times based on the count of tag keys in a variable list
-* We need to reference values in the variable list for each policy definition.
+## Problem Statement
+* We need to deploy a policy definition multiple times based on the count of tag keys from a variable list.
+* We need to reference the values from the variable list for each policy definition.
 
 ## Steps
 

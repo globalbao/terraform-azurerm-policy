@@ -2,7 +2,8 @@
 
 ## Requirements
 
-* We have multiple child modules and need to create AzureRM PolicySets referencing Policy Definition IDs. Both resources are in seperate child modules.
+* We need to create AzureRM PolicySets referencing Policy Definition IDs. 
+* Both resources above are in seperate child modules so we need to pass outputs between modules using output variables and input variables.
 
 ## Steps
 

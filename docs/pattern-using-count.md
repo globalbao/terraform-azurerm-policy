@@ -28,6 +28,7 @@ variable "mandatory_tag_keys" {
 ### 2 - Deploy a resource multiple times based on the length of the variable list
 
 Within the resource block reference the variable list using `count = length(var.variableName)`.
+
 Because we have 6 tag keys listed in the `mandatory_tag_keys` variable above, the resource below will be deployed 6 times.
 
 ```hcl
@@ -38,7 +39,9 @@ resource "azurerm_policy_definition" "addTagToRG" {
 ### 3 - Reference all values from the variable list using [count.index]
 
 Within the resource block reference the variable list values index using `${var.variableName[count.index]}`.
+
 Using [count.index] means each value contained in the variable list above will be referenced by each resource deployment in this resource block.
+
 Specific index items can also be referenced using `${var.variableName[0]}`,`${var.variableName[1]}`,`${var.variableName[2]}`, etc.
 
 ```hcl

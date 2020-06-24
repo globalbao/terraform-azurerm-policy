@@ -1,4 +1,4 @@
-# Terraform Pattern: Using a data source to lookup policy definition ids based on a variable list of policy definition display names
+# Terraform Pattern: Using a data source to lookup built-in policy definition ids based on a variable list of display names
 
 ## Requirements
 

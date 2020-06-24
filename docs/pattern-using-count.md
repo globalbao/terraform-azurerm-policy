@@ -114,5 +114,5 @@ PARAMETERS
 }
 ```
 
-### Docs Home
-[https://globalbao.github.io/terraform-azurerm-policy/](https://globalbao.github.io/terraform-azurerm-policy/)
+### Home
+[terraform-azurerm-policy](https://globalbao.github.io/terraform-azurerm-policy/)

@@ -1,8 +1,8 @@
 # Terraform Pattern: Passing outputs between modules for resources created using count
 
-## Requirements
+## Problem Statement
 
-* We need to create AzureRM PolicySets referencing Policy Definition IDs. 
+* We need to create policysets (initiatives) referencing custom policy definition ids for custom policy defintions created in our code.
 * Both resources above are in seperate child modules so we need to pass outputs between modules using output variables and input variables.
 
 ## Steps

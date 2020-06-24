@@ -1,7 +1,7 @@
-# Terraform Pattern: Using count and count.index to deploy multiple azure policy definitions
+# Terraform Pattern: Using count and count.index to create multiple custom azure policy definitions
 
 ## Problem Statement
-* We need to deploy a policy definition multiple times based on the count of tag keys from a variable list.
+* We need to create a policy definition multiple times based on the count of tag keys from a variable list.
 * We need to reference the values from the variable list for each policy definition.
 
 ## Steps

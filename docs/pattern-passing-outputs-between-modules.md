@@ -114,3 +114,6 @@ module "policyset_definitions" {
   addTagToRG_policy_id_5 = "${module.policy_definitions.addTagToRG_policy_ids[5]}"
 }
 ```
+
+### Docs Home
+[https://globalbao.github.io/terraform-azurerm-policy/](https://globalbao.github.io/terraform-azurerm-policy/)

@@ -6,6 +6,10 @@
 
 ## Steps
 
+1. Define a variable list
+2. Deploy a resource multiple times based on the length of the variable list
+3. Reference all values from the variable list using [count.index]
+
 ### 1 - Define a variable list
 
 Create a variable list for tag keys and provide default values if desired.

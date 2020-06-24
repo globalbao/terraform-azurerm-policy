@@ -1,4 +1,4 @@
-# Terraform Pattern: Passing outputs between modules for resources created using count
+# Terraform Pattern: Passing outputs between modules for custom policy definitions created using count
 
 ## Problem Statement
 

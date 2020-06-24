@@ -14,7 +14,9 @@
 
 ## 1 - Define an output variable for policy definition ids referencing the resource block that uses count
 
-All resources created by a resource block that uses `count = length(var.variableName)` can be referenced using `${resourcepProvider.resourceType.resourceName.*.output}`.
+First, define an output variable for policy definitions.
+
+All resources created by a resource block that uses `count = length(var.variableName)` can be referenced using `${resourceProvider.resourceType.resourceName.*.output}`.
 
 This output variable should be defined in the same module where the `policy definition` resource is created.
 
@@ -27,7 +29,7 @@ output "addTagToRG_policy_ids" {
 
 ## 2 - Define input variables for each policy definition id to be referenced in a policyset resource
 
-These policy id input variables should be defined in the module where the `policyset` resource is created.
+Next, within your policyset module, define an input variable e.g. `addTagToRG_policy_id_0` for each policy definition resource created by the policy definition resource block that uses count.
 
 ```hcl
 variable "addTagToRG_policy_id_0" {
@@ -62,6 +64,8 @@ variable "addTagToRG_policy_id_5" {
 ```
 
 ## 3 - Reference each input variable in the policyset resource block
+
+Then, within your policyset resource block, for each policy definition id reference each input variable created above using `${var.variableName}`
 
 ```hcl
 resource "azurerm_policy_set_definition" "tag_governance" {
@@ -101,7 +105,7 @@ POLICY_DEFINITIONS
 
 ## 4 - Map the policy definition id input variable to the policy definition id output variable
 
-From the parent module file which calls the child modules, map each input variable to the output variable using `inputVariableName = "${module.moduleName.outputVariableName[X]}"`
+Finally, from the parent module file which calls the child modules, map each input variable to the output variable using `inputVariableName = "${module.moduleName.outputVariableName[X]}"`
 
 ```hcl
 module "policyset_definitions" {

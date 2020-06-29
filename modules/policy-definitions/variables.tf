@@ -15,7 +15,7 @@ variable "mandatory_tag_keys" {
 variable "mandatory_tag_value" {
   type        = string
   description = "Tag value to include with the mandatory tag keys used by policies 'addTagToRG','inheritTagFromRG','bulkAddTagsToRG','bulkInheritTagsFromRG'"
-  default     = "to_be_confirmed"
+  default     = "TBC"
 }
 
 variable "policy_definition_category" {

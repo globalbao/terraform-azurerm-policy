@@ -12,8 +12,8 @@
 
 | Resource Type             | Resource name                  | Deployment Count
 |:--------------------------|:-------------------------------|:----------------
-| azurerm_policy_definition | `addTagToRG`                   | 5
-| azurerm_policy_definition | `inheritTagFromRG`             | 5
+| azurerm_policy_definition | `addTagToRG`                   | 6
+| azurerm_policy_definition | `inheritTagFromRG`             | 6
 | azurerm_policy_definition | `bulkAddTagsToRG`              | 1
 | azurerm_policy_definition | `bulkInheritTagsFromRG`        | 1
 | azurerm_policy_definition | `auditRoleAssignmentType_user` | 1
@@ -24,7 +24,7 @@
 | Name            | Description | Type | Default Value
 |:----------------|:------------|:-----|:---------
 | `mandatory_tag_keys`| List of mandatory tag keys used by policies 'addTagToRG','inheritTagFromRG','bulkAddTagsToRG','bulkInheritTagsFromRG' | `list` | "Application", "CostCentre", "Environment", "ManagedBy", "OwnedBy", "SupportBy"
-| `mandatory_tag_value` | Tag value to include with the mandatory tag keys used by policies 'addTagToRG','inheritTagFromRG','bulkAddTagsToRG','bulkInheritTagsFromRG' | `string` | "to_be_confirmed"
+| `mandatory_tag_value` | Tag value to include with the mandatory tag keys used by policies 'addTagToRG','inheritTagFromRG','bulkAddTagsToRG','bulkInheritTagsFromRG' | `string` | "TBC"
 | `policy_definition_category` | The category to use for all Policy Definitions | `string` | "Custom"
 
 ## Terraform output variables (outputs.tf)

@@ -12,8 +12,8 @@
 
 |Module                  | Resource Type                 | Resource name                  | Deployment Count
 |:-----------------------|:------------------------------|:-------------------------------|:-----
-| policy_definitions     | azurerm_policy_definition     | `addTagToRG`                   | 5
-| policy_definitions     | azurerm_policy_definition     | `inheritTagFromRG`             | 5
+| policy_definitions     | azurerm_policy_definition     | `addTagToRG`                   | 6
+| policy_definitions     | azurerm_policy_definition     | `inheritTagFromRG`             | 6
 | policy_definitions     | azurerm_policy_definition     | `bulkAddTagsToRG`              | 1
 | policy_definitions     | azurerm_policy_definition     | `bulkInheritTagsFromRG`        | 1
 | policy_definitions     | azurerm_policy_definition     | `auditRoleAssignmentType_user` | 1

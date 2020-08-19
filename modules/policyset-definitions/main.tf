@@ -33,9 +33,6 @@ METADATA
             "policyDefinitionId": "${var.addTagToRG_policy_id_5}"
         },
         {
-            "policyDefinitionId": "${var.bulkAddTagsToRG_policy_id}"
-        },
-        {
             "policyDefinitionId": "${var.bulkInheritTagsFromRG_policy_id}"
         },
         {

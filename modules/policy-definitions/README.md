@@ -14,7 +14,6 @@
 |:--------------------------|:-------------------------------|:----------------
 | azurerm_policy_definition | `addTagToRG`                   | 6
 | azurerm_policy_definition | `inheritTagFromRG`             | 6
-| azurerm_policy_definition | `bulkAddTagsToRG`              | 1
 | azurerm_policy_definition | `bulkInheritTagsFromRG`        | 1
 | azurerm_policy_definition | `auditRoleAssignmentType_user` | 1
 | azurerm_policy_definition | `auditLockOnNetworking`        | 1
@@ -33,7 +32,6 @@
 |:-------|:-----------|:----------
 | `addTagToRG_policy_ids` | The policy definition ids for addTagToRG policies | ${azurerm_policy_definition.addTagToRG.*.id}
 | `inheritTagFromRG_policy_ids` | The policy definition ids for inheritTagFromRG policies | ${azurerm_policy_definition.inheritTagFromRG.*.id}
-| `bulkAddTagsToRG_policy_id` | The policy definition ids for inheritTagFromRG policies | ${azurerm_policy_definition.inheritTagFromRG.*.id}
 | `bulkInheritTagsFromRG_policy_id` | The policy definition id for bulkInheritTagsFromRG | ${azurerm_policy_definition.bulkInheritTagsFromRG.id}
 | `auditRoleAssignmentType_user_policy_id` | The policy definition id for auditRoleAssignmentType_user | ${azurerm_policy_definition.auditRoleAssignmentType_user.id}
 | `auditLockOnNetworking_policy_id` | The policy definition id for auditLockOnNetworking | ${azurerm_policy_definition.auditLockOnNetworking.id}

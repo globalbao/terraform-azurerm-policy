@@ -51,7 +51,6 @@ module "policyset_definitions" {
   inheritTagFromRG_policy_id_3           = "${module.policy_definitions.inheritTagFromRG_policy_ids[3]}"
   inheritTagFromRG_policy_id_4           = "${module.policy_definitions.inheritTagFromRG_policy_ids[4]}"
   inheritTagFromRG_policy_id_5           = "${module.policy_definitions.inheritTagFromRG_policy_ids[5]}"
-  bulkAddTagsToRG_policy_id              = "${module.policy_definitions.bulkAddTagsToRG_policy_id}"
   bulkInheritTagsFromRG_policy_id        = "${module.policy_definitions.bulkInheritTagsFromRG_policy_id}"
   auditRoleAssignmentType_user_policy_id = "${module.policy_definitions.auditRoleAssignmentType_user_policy_id}"
   auditLockOnNetworking_policy_id        = "${module.policy_definitions.auditLockOnNetworking_policy_id}"

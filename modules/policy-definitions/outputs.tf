@@ -8,11 +8,6 @@ output "inheritTagFromRG_policy_ids" {
   description = "The policy definition ids for inheritTagFromRG policies"
 }
 
-output "bulkAddTagsToRG_policy_id" {
-  value       = "${azurerm_policy_definition.bulkAddTagsToRG.id}"
-  description = "The policy definition id for bulkAddTagsToRG"
-}
-
 output "bulkInheritTagsFromRG_policy_id" {
   value       = "${azurerm_policy_definition.bulkInheritTagsFromRG.id}"
   description = "The policy definition id for bulkInheritTagsFromRG"

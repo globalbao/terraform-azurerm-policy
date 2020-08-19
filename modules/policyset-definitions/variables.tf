@@ -64,11 +64,6 @@ variable "inheritTagFromRG_policy_id_5" {
   description = "The policy definition id '5' from the 'inheritTagFromRG_policy_ids' output"
 }
 
-variable "bulkAddTagsToRG_policy_id" {
-  type        = string
-  description = "The policy definition id for bulkAddTagsToRG"
-}
-
 variable "bulkInheritTagsFromRG_policy_id" {
   type        = string
   description = "The policy definition id for bulkInheritTagsFromRG"

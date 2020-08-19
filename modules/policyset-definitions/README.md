@@ -34,7 +34,6 @@
 | `inheritTagFromRG_policy_id_3` | The policy definition id '3' from the 'inheritTagFromRG_policy_ids' output | `string` | null
 | `inheritTagFromRG_policy_id_4` | The policy definition id '4' from the 'inheritTagFromRG_policy_ids' output | `string` | null
 | `inheritTagFromRG_policy_id_5` | The policy definition id '5' from the 'inheritTagFromRG_policy_ids' output | `string` | null
-| `bulkAddTagsToRG_policy_id` | The policy definition id for bulkAddTagsToRG | `string` | null
 | `bulkInheritTagsFromRG_policy_id` | The policy definition id for bulkInheritTagsFromRG | `string` | null
 | `auditRoleAssignmentType_user_policy_id` | The policy definition id for auditRoleAssignmentType_user | `string` | null
 | `auditLockOnNetworking_policy_id` | The policy definition id for auditLockOnNetworking | `string` | null

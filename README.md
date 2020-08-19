@@ -16,7 +16,6 @@
 |:-----------------------|:------------------------------|:-------------------------------|:-----
 | policy_definitions     | azurerm_policy_definition     | `addTagToRG`                   | 6
 | policy_definitions     | azurerm_policy_definition     | `inheritTagFromRG`             | 6
-| policy_definitions     | azurerm_policy_definition     | `bulkAddTagsToRG`              | 1
 | policy_definitions     | azurerm_policy_definition     | `bulkInheritTagsFromRG`        | 1
 | policy_definitions     | azurerm_policy_definition     | `auditRoleAssignmentType_user` | 1
 | policy_definitions     | azurerm_policy_definition     | `auditLockOnNetworking`        | 1
@@ -46,7 +45,6 @@
 |:--------------------------------------------|:------------------------------------------------------------|:----------
 | `addTagToRG_policy_ids`                     | The policy definition ids for addTagToRG policies           | ${module.policy_definitions.addTagToRG_policy_ids}
 | `inheritTagFromRG_policy_ids`               | The policy definition ids for inheritTagFromRG policies     | ${module.policy_definitions.inheritTagFromRG_policy_ids}
-| `bulkAddTagsToRG_policy_id`                 | The policy definition ids for inheritTagFromRG policies     | ${module.policy_definitions.bulkAddTagsToRG_policy_id}
 | `bulkInheritTagsFromRG_policy_id`           | The policy definition id for bulkInheritTagsFromRG          | ${module.policy_definitions.bulkInheritTagsFromRG_policy_id}
 | `auditRoleAssignmentType_user_policy_id`    | The policy definition id for auditRoleAssignmentType_user   | ${module.policy_definitions.auditRoleAssignmentType_user_policy_id}
 | `auditLockOnNetworking_policy_id`           | The policy definition id for auditLockOnNetworking          | ${module.policy_definitions.auditLockOnNetworking_policy_id}
@@ -119,7 +117,6 @@ module "policyset_definitions" {
   inheritTagFromRG_policy_id_3           = "${module.policy_definitions.inheritTagFromRG_policy_ids[3]}"
   inheritTagFromRG_policy_id_4           = "${module.policy_definitions.inheritTagFromRG_policy_ids[4]}"
   inheritTagFromRG_policy_id_5           = "${module.policy_definitions.inheritTagFromRG_policy_ids[5]}"
-  bulkAddTagsToRG_policy_id              = "${module.policy_definitions.bulkAddTagsToRG_policy_id}"
   bulkInheritTagsFromRG_policy_id        = "${module.policy_definitions.bulkInheritTagsFromRG_policy_id}"
   auditRoleAssignmentType_user_policy_id = "${module.policy_definitions.auditRoleAssignmentType_user_policy_id}"
   auditLockOnNetworking_policy_id        = "${module.policy_definitions.auditLockOnNetworking_policy_id}"

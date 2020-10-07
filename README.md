@@ -4,6 +4,12 @@
 
 ![ModuleLayout](https://github.com/globalbao/terraform-azurerm-policy/blob/master/images/terraform-azurepolicy-modulelayout.png?raw=true)
 
+
+## Blogs that might interest you :pencil:
+
+* [Azure Policy as Code with Terraform Part 1](https://jloudon.com/cloud/Azure-Policy-as-Code-with-Terraform-Part-1/)
+* [Azure Policy as Code with Terraform Part 2](https://jloudon.com/cloud/Azure-Policy-as-Code-with-Terraform-Part-2/)
+
 ## Terraform parent module files
 
 * `main.tf`

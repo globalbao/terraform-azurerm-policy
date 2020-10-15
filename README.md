@@ -7,6 +7,7 @@
 
 ## Blogs that might interest you :pencil:
 
+* [Using GitHub Actions and Terraform for IaC Automation](https://jloudon.com/cloud/Using-GitHub-Actions-and-Terraform-for-IaC-Automation/)
 * [Azure Policy as Code with Terraform Part 1](https://jloudon.com/cloud/Azure-Policy-as-Code-with-Terraform-Part-1/)
 * [Azure Policy as Code with Terraform Part 2](https://jloudon.com/cloud/Azure-Policy-as-Code-with-Terraform-Part-2/)
 * [Cloud Governance with Azure Policy Part 1](https://jloudon.com/cloud/Cloud-Governance-with-Azure-Policy-Part-1/)

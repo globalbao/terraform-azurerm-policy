@@ -12,49 +12,13 @@ resource "azurerm_policy_set_definition" "tag_governance" {
 
 METADATA
 
-  policy_definitions = <<POLICY_DEFINITIONS
-    [
-        {
-            "policyDefinitionId": "${var.addTagToRG_policy_id_0}"
-        },
-        {
-            "policyDefinitionId": "${var.addTagToRG_policy_id_1}"
-        },
-        {
-            "policyDefinitionId": "${var.addTagToRG_policy_id_2}"
-        },     
-        {
-            "policyDefinitionId": "${var.addTagToRG_policy_id_3}"
-        },
-        {
-            "policyDefinitionId": "${var.addTagToRG_policy_id_4}"
-        },
-        {
-            "policyDefinitionId": "${var.addTagToRG_policy_id_5}"
-        },
-        {
-            "policyDefinitionId": "${var.bulkInheritTagsFromRG_policy_id}"
-        },
-        {
-            "policyDefinitionId": "${var.inheritTagFromRG_policy_id_0}"
-        },
-        {
-            "policyDefinitionId": "${var.inheritTagFromRG_policy_id_1}"
-        },
-        {
-            "policyDefinitionId": "${var.inheritTagFromRG_policy_id_2}"
-        },
-        {
-            "policyDefinitionId": "${var.inheritTagFromRG_policy_id_3}"
-        },
-        {
-            "policyDefinitionId": "${var.inheritTagFromRG_policy_id_4}"
-        },
-        {
-            "policyDefinitionId": "${var.inheritTagFromRG_policy_id_5}"
-        }
-    ]
-POLICY_DEFINITIONS
+  dynamic "policy_definition_reference" {
+    for_each = var.custom_policies_tag_governance
+    content {
+      policy_definition_id = policy_definition_reference.value["policyID"]
+      reference_id         = policy_definition_reference.value["policyID"]
+    }
+  }
 }
 
 resource "azurerm_policy_set_definition" "iam_governance" {
@@ -71,49 +35,21 @@ resource "azurerm_policy_set_definition" "iam_governance" {
 
 METADATA
 
-  policy_definitions = <<POLICY_DEFINITIONS
-    [
-        {
-            "policyDefinitionId": "${var.auditRoleAssignmentType_user_policy_id}"
-        },
-        {
-            "policyDefinitionId": "${var.auditLockOnNetworking_policy_id}"
-        },
-        {
-            "policyDefinitionId": "${data.azurerm_policy_definition.iam_policyset_definitions.*.id[0]}"
-        },
-        {
-            "policyDefinitionId": "${data.azurerm_policy_definition.iam_policyset_definitions.*.id[1]}"
-        },
-        {
-            "policyDefinitionId": "${data.azurerm_policy_definition.iam_policyset_definitions.*.id[2]}"
-        },
-        {
-            "policyDefinitionId": "${data.azurerm_policy_definition.iam_policyset_definitions.*.id[3]}"
-        },
-        {
-            "policyDefinitionId": "${data.azurerm_policy_definition.iam_policyset_definitions.*.id[4]}"
-        },
-        {
-            "policyDefinitionId": "${data.azurerm_policy_definition.iam_policyset_definitions.*.id[5]}"
-        },
-        {
-            "policyDefinitionId": "${data.azurerm_policy_definition.iam_policyset_definitions.*.id[6]}"
-        },
-        {
-            "policyDefinitionId": "${data.azurerm_policy_definition.iam_policyset_definitions.*.id[7]}"
-        },
-        {
-            "policyDefinitionId": "${data.azurerm_policy_definition.iam_policyset_definitions.*.id[8]}"
-        },
-        {
-            "policyDefinitionId": "${data.azurerm_policy_definition.iam_policyset_definitions.*.id[9]}"
-        },
-        {
-            "policyDefinitionId": "${data.azurerm_policy_definition.iam_policyset_definitions.*.id[10]}"
-        }
-    ]
-POLICY_DEFINITIONS
+  dynamic "policy_definition_reference" {
+    for_each = var.custom_policies_iam_governance
+    content {
+      policy_definition_id = policy_definition_reference.value["policyID"]
+      reference_id         = policy_definition_reference.value["policyID"]
+    }
+  }
+
+  dynamic "policy_definition_reference" {
+    for_each = data.azurerm_policy_definition.builtin_policies_iam_governance
+    content {
+      policy_definition_id = policy_definition_reference.value["id"]
+      reference_id         = policy_definition_reference.value["id"]
+    }
+  }
 }
 
 resource "azurerm_policy_set_definition" "security_governance" {
@@ -130,55 +66,13 @@ resource "azurerm_policy_set_definition" "security_governance" {
 
 METADATA
 
-  policy_definitions = <<POLICY_DEFINITIONS
-    [
-        {
-            "policyDefinitionId": "${data.azurerm_policy_definition.security_policyset_definitions.*.id[0]}"
-        },
-        {
-            "policyDefinitionId": "${data.azurerm_policy_definition.security_policyset_definitions.*.id[1]}"
-        },
-        {
-            "policyDefinitionId": "${data.azurerm_policy_definition.security_policyset_definitions.*.id[2]}"
-        },
-        {
-            "policyDefinitionId": "${data.azurerm_policy_definition.security_policyset_definitions.*.id[3]}"
-        },
-        {
-            "policyDefinitionId": "${data.azurerm_policy_definition.security_policyset_definitions.*.id[4]}"
-        },
-        {
-            "policyDefinitionId": "${data.azurerm_policy_definition.security_policyset_definitions.*.id[5]}"
-        },
-        {
-            "policyDefinitionId": "${data.azurerm_policy_definition.security_policyset_definitions.*.id[6]}"
-        },
-        {
-            "policyDefinitionId": "${data.azurerm_policy_definition.security_policyset_definitions.*.id[7]}"
-        },
-        {
-            "policyDefinitionId": "${data.azurerm_policy_definition.security_policyset_definitions.*.id[8]}"
-        },
-        {
-            "policyDefinitionId": "${data.azurerm_policy_definition.security_policyset_definitions.*.id[9]}"
-        },
-        {
-            "policyDefinitionId": "${data.azurerm_policy_definition.security_policyset_definitions.*.id[10]}"
-        },
-        {
-            "policyDefinitionId": "${data.azurerm_policy_definition.security_policyset_definitions.*.id[11]}"
-        },
-        {
-            "policyDefinitionId": "${data.azurerm_policy_definition.security_policyset_definitions.*.id[12]}"
-        },
-        {
-            "policyDefinitionId": "${data.azurerm_policy_definition.security_policyset_definitions.*.id[13]}"
-        },
-        {
-            "policyDefinitionId": "${data.azurerm_policy_definition.security_policyset_definitions.*.id[14]}"
-        }
-    ]
-POLICY_DEFINITIONS
+  dynamic "policy_definition_reference" {
+    for_each = data.azurerm_policy_definition.builtin_policies_security_governance
+    content {
+      policy_definition_id = policy_definition_reference.value["id"]
+      reference_id         = policy_definition_reference.value["id"]
+    }
+  }
 }
 
 resource "azurerm_policy_set_definition" "data_protection_governance" {
@@ -195,20 +89,11 @@ resource "azurerm_policy_set_definition" "data_protection_governance" {
 
 METADATA
 
-  policy_definitions = <<POLICY_DEFINITIONS
-    [
-        {
-            "policyDefinitionId": "${data.azurerm_policy_definition.data_protection_policyset_definitions.*.id[0]}"
-        },
-        {
-            "policyDefinitionId": "${data.azurerm_policy_definition.data_protection_policyset_definitions.*.id[1]}"
-        },
-        {
-            "policyDefinitionId": "${data.azurerm_policy_definition.data_protection_policyset_definitions.*.id[2]}"
-        },
-        {
-            "policyDefinitionId": "${data.azurerm_policy_definition.data_protection_policyset_definitions.*.id[3]}"
-        }
-]
-POLICY_DEFINITIONS
+  dynamic "policy_definition_reference" {
+    for_each = data.azurerm_policy_definition.builtin_policies_data_protection_governance
+    content {
+      policy_definition_id = policy_definition_reference.value["id"]
+      reference_id         = policy_definition_reference.value["id"]
+    }
+  }
 }

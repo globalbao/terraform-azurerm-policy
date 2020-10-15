@@ -4,99 +4,17 @@ variable "policyset_definition_category" {
   default     = "Custom"
 }
 
-variable "addTagToRG_policy_id_0" {
-  type        = string
-  description = "The policy definition id '0' from the 'addTagToRG_policy_ids' output"
+variable "custom_policies_tag_governance" {
+  type = list(map(string))
 }
 
-variable "addTagToRG_policy_id_1" {
-  type        = string
-  description = "The policy definition id '1' from the 'addTagToRG_policy_ids' output"
+variable "custom_policies_iam_governance" {
+  type = list(map(string))
 }
 
-variable "addTagToRG_policy_id_2" {
-  type        = string
-  description = "The policy definition id '2' from the 'addTagToRG_policy_ids' output"
-}
-
-variable "addTagToRG_policy_id_3" {
-  type        = string
-  description = "The policy definition id '3' from the 'addTagToRG_policy_ids' output"
-}
-
-variable "addTagToRG_policy_id_4" {
-  type        = string
-  description = "The policy definition id '4' from the 'addTagToRG_policy_ids' output"
-}
-
-variable "addTagToRG_policy_id_5" {
-  type        = string
-  description = "The policy definition id '5' from the 'addTagToRG_policy_ids' output"
-}
-
-variable "inheritTagFromRG_policy_id_0" {
-  type        = string
-  description = "The policy definition id '0' from the 'inheritTagFromRG_policy_ids' output"
-}
-
-variable "inheritTagFromRG_policy_id_1" {
-  type        = string
-  description = "The policy definition id '1' from the 'inheritTagFromRG_policy_ids' output"
-}
-
-variable "inheritTagFromRG_policy_id_2" {
-  type        = string
-  description = "The policy definition id '2' from the 'inheritTagFromRG_policy_ids' output"
-}
-
-variable "inheritTagFromRG_policy_id_3" {
-  type        = string
-  description = "The policy definition id '3' from the 'inheritTagFromRG_policy_ids' output"
-}
-
-variable "inheritTagFromRG_policy_id_4" {
-  type        = string
-  description = "The policy definition id '4' from the 'inheritTagFromRG_policy_ids' output"
-}
-
-variable "inheritTagFromRG_policy_id_5" {
-  type        = string
-  description = "The policy definition id '5' from the 'inheritTagFromRG_policy_ids' output"
-}
-
-variable "bulkInheritTagsFromRG_policy_id" {
-  type        = string
-  description = "The policy definition id for bulkInheritTagsFromRG"
-}
-
-variable "auditRoleAssignmentType_user_policy_id" {
-  type        = string
-  description = "The policy definition id for auditRoleAssignmentType_user"
-}
-
-variable "auditLockOnNetworking_policy_id" {
-  type        = string
-  description = "The policy definition id for auditLockOnNetworking"
-}
-
-data "azurerm_policy_definition" "iam_policyset_definitions" {
-  count        = length(var.iam_policyset_definitions)
-  display_name = var.iam_policyset_definitions[count.index]
-}
-
-data "azurerm_policy_definition" "security_policyset_definitions" {
-  count        = length(var.security_policyset_definitions)
-  display_name = var.security_policyset_definitions[count.index]
-}
-
-data "azurerm_policy_definition" "data_protection_policyset_definitions" {
-  count        = length(var.data_protection_policyset_definitions)
-  display_name = var.data_protection_policyset_definitions[count.index]
-}
-
-variable "iam_policyset_definitions" {
+variable "builtin_policies_iam_governance" {
   type        = list
-  description = "List of policy definitions (display names) for the iam_governance policyset"
+  description = "List of built-in policy definitions (display names) for the iam_governance policyset"
   default = [
     "Audit usage of custom RBAC rules",
     "Custom subscription owner roles should not exist",
@@ -112,7 +30,7 @@ variable "iam_policyset_definitions" {
   ]
 }
 
-variable "security_policyset_definitions" {
+variable "builtin_policies_security_governance" {
   type        = list
   description = "List of policy definitions (display names) for the security_governance policyset"
   default = [
@@ -134,7 +52,7 @@ variable "security_policyset_definitions" {
   ]
 }
 
-variable "data_protection_policyset_definitions" {
+variable "builtin_policies_data_protection_governance" {
   type        = list
   description = "List of policy definitions (display names) for the data_protection_governance policyset"
   default = [
@@ -143,4 +61,19 @@ variable "data_protection_policyset_definitions" {
     "Audit virtual machines without disaster recovery configured",
     "Key Vault objects should be recoverable"
   ]
+}
+
+data "azurerm_policy_definition" "builtin_policies_iam_governance" {
+  count        = length(var.builtin_policies_iam_governance)
+  display_name = var.builtin_policies_iam_governance[count.index]
+}
+
+data "azurerm_policy_definition" "builtin_policies_security_governance" {
+  count        = length(var.builtin_policies_security_governance)
+  display_name = var.builtin_policies_security_governance[count.index]
+}
+
+data "azurerm_policy_definition" "builtin_policies_data_protection_governance" {
+  count        = length(var.builtin_policies_data_protection_governance)
+  display_name = var.builtin_policies_data_protection_governance[count.index]
 }

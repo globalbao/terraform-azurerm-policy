@@ -6,8 +6,8 @@ variable "mandatory_tag_keys" {
     "CostCentre",
     "Environment",
     "ManagedBy",
-    "OwnedBy",
-    "SupportBy"
+    "Owner",
+    "Support"
   ]
 
 }

@@ -67,6 +67,24 @@ module "policyset_definitions" {
       policyID = module.policy_definitions.inheritTagFromRG_policy_ids[5]
     },
     {
+      policyID = module.policy_definitions.inheritTagFromRGOverwriteExisting_policy_ids[0]
+    },
+    {
+      policyID = module.policy_definitions.inheritTagFromRGOverwriteExisting_policy_ids[1]
+    },
+    {
+      policyID = module.policy_definitions.inheritTagFromRGOverwriteExisting_policy_ids[2]
+    },
+    {
+      policyID = module.policy_definitions.inheritTagFromRGOverwriteExisting_policy_ids[3]
+    },
+    {
+      policyID = module.policy_definitions.inheritTagFromRGOverwriteExisting_policy_ids[4]
+    },
+    {
+      policyID = module.policy_definitions.inheritTagFromRGOverwriteExisting_policy_ids[5]
+    },
+    {
       policyID = module.policy_definitions.bulkInheritTagsFromRG_policy_id
     }
   ]

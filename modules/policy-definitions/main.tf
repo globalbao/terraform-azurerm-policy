@@ -663,10 +663,10 @@ METADATA
                         "value": "[field('location')]"
                     },
                     "actionGroupName": {
-                        "value": "AlertOperationsGroup"
+                        "value": "${var.azure_monitor_action_group_name}"
                     },
                     "actionGroupRG": {
-                        "value": "AzMonitorAlertGroups"
+                        "value": "${var.azure_monitor_action_group_rg_name}"
                     }                 
                 }
             }
@@ -842,10 +842,10 @@ METADATA
                         "value": "[field('location')]"
                     },
                     "actionGroupName": {
-                        "value": "AlertOperationsGroup"
+                        "value": "${var.azure_monitor_action_group_name}"
                     },
                     "actionGroupRG": {
-                        "value": "AzMonitorAlertGroups"
+                        "value": "${var.azure_monitor_action_group_rg_name}"
                     } 
                 }
             }
@@ -1017,10 +1017,10 @@ METADATA
                         "value": "[field('location')]"
                     },
                     "actionGroupName": {
-                        "value": "AlertOperationsGroup"
+                        "value": "${var.azure_monitor_action_group_name}"
                     },
                     "actionGroupRG": {
-                        "value": "AzMonitorAlertGroups"
+                        "value": "${var.azure_monitor_action_group_rg_name}"
                     }                 
                 }
             }
@@ -1192,10 +1192,10 @@ METADATA
                         "value": "[field('location')]"
                     },
                     "actionGroupName": {
-                        "value": "AlertOperationsGroup"
+                        "value": "${var.azure_monitor_action_group_name}"
                     },
                     "actionGroupRG": {
-                        "value": "AzMonitorAlertGroups"
+                        "value": "${var.azure_monitor_action_group_rg_name}"
                     }                 
                 }
             }
@@ -1367,10 +1367,10 @@ METADATA
                         "value": "[field('location')]"
                     },
                     "actionGroupName": {
-                        "value": "AlertOperationsGroup"
+                        "value": "${var.azure_monitor_action_group_name}"
                     },
                     "actionGroupRG": {
-                        "value": "AzMonitorAlertGroups"
+                        "value": "${var.azure_monitor_action_group_rg_name}"
                     }                 
                 }
             }
@@ -1542,10 +1542,10 @@ METADATA
                         "value": "[field('location')]"
                     },
                     "actionGroupName": {
-                        "value": "AlertOperationsGroup"
+                        "value": "${var.azure_monitor_action_group_name}"
                     },
                     "actionGroupRG": {
-                        "value": "AzMonitorAlertGroups"
+                        "value": "${var.azure_monitor_action_group_rg_name}"
                     }                 
                 }
             }
@@ -1724,10 +1724,10 @@ METADATA
                         "value": "[field('location')]"
                     },
                     "actionGroupName": {
-                        "value": "AlertOperationsGroup"
+                        "value": "${var.azure_monitor_action_group_name}"
                     },
                     "actionGroupRG": {
-                        "value": "AzMonitorAlertGroups"
+                        "value": "${var.azure_monitor_action_group_rg_name}"
                     } 
                 }
             }
@@ -1917,10 +1917,10 @@ METADATA
                         "value": "[field('location')]"
                     },
                     "actionGroupName": {
-                        "value": "AlertOperationsGroup"
+                        "value": "${var.azure_monitor_action_group_name}"
                     },
                     "actionGroupRG": {
-                        "value": "AzMonitorAlertGroups"
+                        "value": "${var.azure_monitor_action_group_rg_name}"
                     } 
                 }
             }
@@ -2102,10 +2102,10 @@ METADATA
                         "value": "[field('location')]"
                     },
                     "actionGroupName": {
-                        "value": "AlertOperationsGroup"
+                        "value": "${var.azure_monitor_action_group_name}"
                     },
                     "actionGroupRG": {
-                        "value": "AzMonitorAlertGroups"
+                        "value": "${var.azure_monitor_action_group_rg_name}"
                     } 
                 }
             }
@@ -2268,10 +2268,10 @@ METADATA
                         "value": "[field('location')]"
                     },
                     "actionGroupName": {
-                        "value": "AlertOperationsGroup"
+                        "value": "${var.azure_monitor_action_group_name}"
                     },
                     "actionGroupRG": {
-                        "value": "AzMonitorAlertGroups"
+                        "value": "${var.azure_monitor_action_group_rg_name}"
                     } 
                 }
             }
@@ -2433,10 +2433,10 @@ METADATA
                         "value": "[field('location')]"
                     },
                     "actionGroupName": {
-                        "value": "AlertOperationsGroup"
+                        "value": "${var.azure_monitor_action_group_name}"
                     },
                     "actionGroupRG": {
-                        "value": "AzMonitorAlertGroups"
+                        "value": "${var.azure_monitor_action_group_rg_name}"
                     } 
                 }
             }
@@ -2608,10 +2608,10 @@ METADATA
                         "value": "[field('location')]"
                     },
                     "actionGroupName": {
-                        "value": "AlertOperationsGroup"
+                        "value": "${var.azure_monitor_action_group_name}"
                     },
                     "actionGroupRG": {
-                        "value": "AzMonitorAlertGroups"
+                        "value": "${var.azure_monitor_action_group_rg_name}"
                     } 
                 }
             }
@@ -2783,10 +2783,10 @@ METADATA
                         "value": "[field('location')]"
                     },
                     "actionGroupName": {
-                        "value": "AlertOperationsGroup"
+                        "value": "${var.azure_monitor_action_group_name}"
                     },
                     "actionGroupRG": {
-                        "value": "AzMonitorAlertGroups"
+                        "value": "${var.azure_monitor_action_group_rg_name}"
                     } 
                 }
             }
@@ -2958,10 +2958,10 @@ METADATA
                         "value": "[field('location')]"
                     },
                     "actionGroupName": {
-                        "value": "AlertOperationsGroup"
+                        "value": "${var.azure_monitor_action_group_name}"
                     },
                     "actionGroupRG": {
-                        "value": "AzMonitorAlertGroups"
+                        "value": "${var.azure_monitor_action_group_rg_name}"
                     } 
                 }
             }
@@ -3133,10 +3133,10 @@ METADATA
                         "value": "[field('location')]"
                     },
                     "actionGroupName": {
-                        "value": "AlertOperationsGroup"
+                        "value": "${var.azure_monitor_action_group_name}"
                     },
                     "actionGroupRG": {
-                        "value": "AzMonitorAlertGroups"
+                        "value": "${var.azure_monitor_action_group_rg_name}"
                     } 
                 }
             }
@@ -3308,10 +3308,10 @@ METADATA
                         "value": "[field('location')]"
                     },
                     "actionGroupName": {
-                        "value": "AlertOperationsGroup"
+                        "value": "${var.azure_monitor_action_group_name}"
                     },
                     "actionGroupRG": {
-                        "value": "AzMonitorAlertGroups"
+                        "value": "${var.azure_monitor_action_group_rg_name}"
                     } 
                 }
             }
@@ -3483,10 +3483,10 @@ METADATA
                         "value": "[field('location')]"
                     },
                     "actionGroupName": {
-                        "value": "AlertOperationsGroup"
+                        "value": "${var.azure_monitor_action_group_name}"
                     },
                     "actionGroupRG": {
-                        "value": "AzMonitorAlertGroups"
+                        "value": "${var.azure_monitor_action_group_rg_name}"
                     } 
                 }
             }
@@ -3658,10 +3658,10 @@ METADATA
                         "value": "[field('location')]"
                     },
                     "actionGroupName": {
-                        "value": "AlertOperationsGroup"
+                        "value": "${var.azure_monitor_action_group_name}"
                     },
                     "actionGroupRG": {
-                        "value": "AzMonitorAlertGroups"
+                        "value": "${var.azure_monitor_action_group_rg_name}"
                     } 
                 }
             }
@@ -3833,10 +3833,10 @@ METADATA
                         "value": "[field('location')]"
                     },
                     "actionGroupName": {
-                        "value": "AlertOperationsGroup"
+                        "value": "${var.azure_monitor_action_group_name}"
                     },
                     "actionGroupRG": {
-                        "value": "AzMonitorAlertGroups"
+                        "value": "${var.azure_monitor_action_group_rg_name}"
                     } 
                 }
             }
@@ -4008,10 +4008,10 @@ METADATA
                         "value": "[field('location')]"
                     },
                     "actionGroupName": {
-                        "value": "AlertOperationsGroup"
+                        "value": "${var.azure_monitor_action_group_name}"
                     },
                     "actionGroupRG": {
-                        "value": "AzMonitorAlertGroups"
+                        "value": "${var.azure_monitor_action_group_rg_name}"
                     } 
                 }
             }
@@ -4183,10 +4183,10 @@ METADATA
                         "value": "[field('location')]"
                     },
                     "actionGroupName": {
-                        "value": "AlertOperationsGroup"
+                        "value": "${var.azure_monitor_action_group_name}"
                     },
                     "actionGroupRG": {
-                        "value": "AzMonitorAlertGroups"
+                        "value": "${var.azure_monitor_action_group_rg_name}"
                     } 
                 }
             }
@@ -4358,10 +4358,10 @@ METADATA
                         "value": "[field('location')]"
                     },
                     "actionGroupName": {
-                        "value": "AlertOperationsGroup"
+                        "value": "${var.azure_monitor_action_group_name}"
                     },
                     "actionGroupRG": {
-                        "value": "AzMonitorAlertGroups"
+                        "value": "${var.azure_monitor_action_group_rg_name}"
                     } 
                 }
             }
@@ -4533,10 +4533,10 @@ METADATA
                         "value": "[field('location')]"
                     },
                     "actionGroupName": {
-                        "value": "AlertOperationsGroup"
+                        "value": "${var.azure_monitor_action_group_name}"
                     },
                     "actionGroupRG": {
-                        "value": "AzMonitorAlertGroups"
+                        "value": "${var.azure_monitor_action_group_rg_name}"
                     } 
                 }
             }
@@ -4708,10 +4708,10 @@ METADATA
                         "value": "[field('location')]"
                     },
                     "actionGroupName": {
-                        "value": "AlertOperationsGroup"
+                        "value": "${var.azure_monitor_action_group_name}"
                     },
                     "actionGroupRG": {
-                        "value": "AzMonitorAlertGroups"
+                        "value": "${var.azure_monitor_action_group_rg_name}"
                     } 
                 }
             }
@@ -4883,10 +4883,10 @@ METADATA
                         "value": "[field('location')]"
                     },
                     "actionGroupName": {
-                        "value": "AlertOperationsGroup"
+                        "value": "${var.azure_monitor_action_group_name}"
                     },
                     "actionGroupRG": {
-                        "value": "AzMonitorAlertGroups"
+                        "value": "${var.azure_monitor_action_group_rg_name}"
                     } 
                 }
             }

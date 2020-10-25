@@ -5,15 +5,21 @@ variable "policyset_definition_category" {
 }
 
 variable "custom_policies_monitoring_governance" {
-  type = list(map(string))
+  type        = list(map(string))
+  description = "List of custom policy definitions for the monitoring_governance policyset"
+  default     = []
 }
 
 variable "custom_policies_tag_governance" {
-  type = list(map(string))
+  type        = list(map(string))
+  description = "List of custom policy definitions for the tag_governance policyset"
+  default     = []
 }
 
 variable "custom_policies_iam_governance" {
-  type = list(map(string))
+  type        = list(map(string))
+  description = "List of custom policy definitions for the iam_governance policyset"
+  default     = []
 }
 
 variable "builtin_policies_iam_governance" {

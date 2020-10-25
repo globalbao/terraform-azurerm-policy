@@ -1,9 +1,17 @@
 # AzureRM Policy - Terraform parent module
+
 ![Lint Terraform](https://github.com/globalbao/terraform-azurerm-policy/workflows/Lint%20Terraform/badge.svg)
-* Vendor reference [https://www.terraform.io/docs/providers/azurerm/index.html](https://www.terraform.io/docs/providers/azurerm/index.html)
 
-![ModuleLayout](https://github.com/globalbao/terraform-azurerm-policy/blob/master/images/terraform-azurepolicy-modulelayout.png?raw=true)
+Get in touch :octocat:
 
+* Twitter: [@GitBao](https://twitter.com/gitbao)
+* LinkedIn: [@JesseLoudon](https://www.linkedin.com/in/jesseloudon/)
+* Web: [jloudon.com](https://jloudon.com)
+* GitHub: [@JesseLoudon](https://github.com/jesseloudon)
+
+Learning resources :books:
+* [https://www.terraform.io/docs/providers/azurerm/index.html](https://www.terraform.io/docs/providers/azurerm/index.html)
+* [https://docs.microsoft.com/en-us/azure/governance/policy/overview](https://docs.microsoft.com/en-us/azure/governance/policy/overview)
 
 ## Blogs that might interest you :pencil:
 
@@ -19,23 +27,52 @@
 * `outputs.tf`
 * `variables.tf`
 
+![ModuleLayout](https://github.com/globalbao/terraform-azurerm-policy/blob/master/images/terraform-azurepolicy-modulelayout.png?raw=true)
+
 ## Terraform resources (main.tf)
 
-|Module                  | Resource Type                 | Resource name                  | Deployment Count
-|:-----------------------|:------------------------------|:-------------------------------|:-----
-| policy_definitions     | azurerm_policy_definition     | `addTagToRG`                   | 6
-| policy_definitions     | azurerm_policy_definition     | `inheritTagFromRG`             | 6
-| policy_definitions     | azurerm_policy_definition     | `bulkInheritTagsFromRG`        | 1
-| policy_definitions     | azurerm_policy_definition     | `auditRoleAssignmentType_user` | 1
-| policy_definitions     | azurerm_policy_definition     | `auditLockOnNetworking`        | 1
-| policyset_definitions  | azurerm_policy_set_definition | `tag_governance`               | 1
-| policyset_definitions  | azurerm_policy_set_definition | `iam_governance`               | 1
-| policyset_definitions  | azurerm_policy_set_definition | `security_governance`          | 1
-| policyset_definitions  | azurerm_policy_set_definition | `data_protection_governance`   | 1
-| policy_assignments     | azurerm_policy_assignment     | `tag_governance`               | 1
-| policy_assignments     | azurerm_policy_assignment     | `iam_governance`               | 1
-| policy_assignments     | azurerm_policy_assignment     | `security_governance`          | 1
-| policy_assignments     | azurerm_policy_assignment     | `data_protection_governance`   | 1
+|Module                  | Resource Type                 | Resource name                 | Deployment Count
+|:-----------------------|:------------------------------|:---------------------------------------|:-----
+| policy_definitions     | azurerm_policy_definition | `addTagToRG`                               | 6
+| policy_definitions     | azurerm_policy_definition | `inheritTagFromRG`                         | 6
+| policy_definitions     | azurerm_policy_definition | `inheritTagFromRGOverwriteExisting`        | 6
+| policy_definitions     | azurerm_policy_definition | `bulkInheritTagsFromRG`                    | 1
+| policy_definitions     | azurerm_policy_definition | `auditRoleAssignmentType_user`             | 1
+| policy_definitions     | azurerm_policy_definition | `appGateway_CpuUtilization`                | 1
+| policy_definitions     | azurerm_policy_definition | `appGateway_ClientRtt`                     | 1
+| policy_definitions     | azurerm_policy_definition | `appGateway_UnhealthyHostcount`            | 1
+| policy_definitions     | azurerm_policy_definition | `appGateway_HealthyHostCount`              | 1
+| policy_definitions     | azurerm_policy_definition | `appGateway_FailedRequests`                | 1
+| policy_definitions     | azurerm_policy_definition | `appGateway_TotalRequests`                 | 1
+| policy_definitions     | azurerm_policy_definition | `azureFirewall_Health`                     | 1
+| policy_definitions     | azurerm_policy_definition | `sqlManagedInstances_avgCPUPercent`        | 1
+| policy_definitions     | azurerm_policy_definition | `loadBalancer_VipAvailability`             | 1
+| policy_definitions     | azurerm_policy_definition | `sqlManagedInstances_ioRequests`           | 1
+| policy_definitions     | azurerm_policy_definition | `websvrfarm_CpuPercentage`                 | 1
+| policy_definitions     | azurerm_policy_definition | `websvrfarm_MemoryPercentage`              | 1
+| policy_definitions     | azurerm_policy_definition | `website_AverageMemoryWorkingSet`          | 1
+| policy_definitions     | azurerm_policy_definition | `website_AverageResponseTime`              | 1
+| policy_definitions     | azurerm_policy_definition | `website_CpuTime`                          | 1
+| policy_definitions     | azurerm_policy_definition | `website_HealthCheckStatus`                | 1
+| policy_definitions     | azurerm_policy_definition | `website_Http5xx`                          | 1
+| policy_definitions     | azurerm_policy_definition | `website_RequestsInApplicationQueue`       | 1
+| policy_definitions     | azurerm_policy_definition | `websiteSlot_AverageMemoryWorkingSet`      | 1
+| policy_definitions     | azurerm_policy_definition | `websiteSlot_AverageResponseTime`          | 1
+| policy_definitions     | azurerm_policy_definition | `websiteSlot_CpuTime`                      | 1
+| policy_definitions     | azurerm_policy_definition | `websiteSlot_HealthCheckStatus`            | 1
+| policy_definitions     | azurerm_policy_definition | `websiteSlot_Http5xx`                      | 1
+| policy_definitions     | azurerm_policy_definition | `websiteSlot_RequestsInApplicationQueue`   | 1
+| policyset_definitions  | azurerm_policy_set_definition | `monitoring_governance`                | 1
+| policyset_definitions  | azurerm_policy_set_definition | `tag_governance`                       | 1
+| policyset_definitions  | azurerm_policy_set_definition | `iam_governance`                       | 1
+| policyset_definitions  | azurerm_policy_set_definition | `security_governance`                  | 1
+| policyset_definitions  | azurerm_policy_set_definition | `data_protection_governance`           | 1
+| policy_assignments     | azurerm_policy_assignment     | `monitoring_governance`                | 1
+| policy_assignments     | azurerm_policy_assignment     | `tag_governance`                       | 1
+| policy_assignments     | azurerm_policy_assignment     | `iam_governance`                       | 1
+| policy_assignments     | azurerm_policy_assignment     | `security_governance`                  | 1
+| policy_assignments     | azurerm_policy_assignment     | `data_protection_governance`           | 1
+
 
 ## Terraform input variables (variables.tf)
 
@@ -50,23 +87,16 @@
 
 ## Terraform output variables (outputs.tf)
 
-| Name                                        | Description                                                 | Value
-|:--------------------------------------------|:------------------------------------------------------------|:----------
-| `addTagToRG_policy_ids`                     | The policy definition ids for addTagToRG policies           | ${module.policy_definitions.addTagToRG_policy_ids}
-| `inheritTagFromRG_policy_ids`               | The policy definition ids for inheritTagFromRG policies     | ${module.policy_definitions.inheritTagFromRG_policy_ids}
-| `bulkInheritTagsFromRG_policy_id`           | The policy definition id for bulkInheritTagsFromRG          | ${module.policy_definitions.bulkInheritTagsFromRG_policy_id}
-| `auditRoleAssignmentType_user_policy_id`    | The policy definition id for auditRoleAssignmentType_user   | ${module.policy_definitions.auditRoleAssignmentType_user_policy_id}
-| `auditLockOnNetworking_policy_id`           | The policy definition id for auditLockOnNetworking          | ${module.policy_definitions.auditLockOnNetworking_policy_id}
-| `tag_governance_policyset_id`               | The policy set definition id for tag_governance             | ${module.policyset_definitions.tag_governance_policyset_id}
-| `iam_governance_policyset_id`               | The policy set definition id for iam_governance             | ${module.policyset_definitions.iam_governance_policyset_id}
-| `security_governance_policyset_id`          | The policy set definition id for security_governance        | ${module.policyset_definitions.security_governance_policyset_id}
-| `data_protection_governance_policyset_id`   | The policy set definition id for data_protection_governance | ${module.policyset_definitions.data_protection_governance_policyset_id}
-| `tag_governance_assignment_id`              | The policy assignment id for tag_governance                 | ${module.policy_assignments.tag_governance_assignment_id}
-| `tag_governance_assignment_identity`        | The policy assignment identity for tag_governance           | ${module.policy_assignments.tag_governance_assignment_identity}
-| `iam_governance_assignment_id`              | The policy assignment id for iam_governance                 | ${module.policy_assignments.iam_governance_assignment_id}
-| `security_governance_assignment_id`         | The policy assignment id for security_governance            | ${module.policy_assignments.security_governance_assignment_id}
-| `security_governance_assignment_identity`   | The policy assignment identity for security_governance      | ${module.policy_assignments.security_governance_assignment_identity}
-| `data_protection_governance_assignment_id`  | The policy assignment id for data_protection_governance     | ${module.policy_assignments.data_protection_governance_assignment_id}
+| Name           | Description        | Value
+|:---------------|:-------------------|:----------
+| `monitoring_governance_assignment_id`              | The policy assignment id for monitoring_governance                 | module.policy_assignments.monitoring_governance_assignment_id
+| `monitoring_governance_assignment_identity`        | The policy assignment identity for monitoring_governance           | module.policy_assignments.monitoring_governance_assignment_identity
+| `tag_governance_assignment_id`              | The policy assignment id for tag_governance                 | module.policy_assignments.tag_governance_assignment_id
+| `tag_governance_assignment_identity`        | The policy assignment identity for tag_governance           | module.policy_assignments.tag_governance_assignment_identity
+| `iam_governance_assignment_id`              | The policy assignment id for iam_governance                 | module.policy_assignments.iam_governance_assignment_id
+| `security_governance_assignment_id`         | The policy assignment id for security_governance            | module.policy_assignments.security_governance_assignment_id
+| `security_governance_assignment_identity`   | The policy assignment identity for security_governance      | module.policy_assignments.security_governance_assignment_identity
+| `data_protection_governance_assignment_id`  | The policy assignment id for data_protection_governance     | module.policy_assignments.data_protection_governance_assignment_id
 
 ## Usage Examples
 
@@ -87,7 +117,7 @@ terraform {
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
-      version = "~> 2.31.0"
+      version = "~> 2.33.0"
     }
   }
 }
@@ -99,6 +129,7 @@ provider "azurerm" {
 module "policy_assignments" {
   source = "./modules/policy-assignments"
 
+  monitoring_governance_policyset_id      = module.policyset_definitions.monitoring_governance_policyset_id
   tag_governance_policyset_id             = module.policyset_definitions.tag_governance_policyset_id
   iam_governance_policyset_id             = module.policyset_definitions.iam_governance_policyset_id
   security_governance_policyset_id        = module.policyset_definitions.security_governance_policyset_id
@@ -112,6 +143,84 @@ module "policy_definitions" {
 
 module "policyset_definitions" {
   source = "./modules/policyset-definitions"
+
+  custom_policies_monitoring_governance = [
+    {
+      policyID = module.policy_definitions.sqlManagedInstances_ioRequests_policy_id
+    },
+    {
+      policyID = module.policy_definitions.sqlManagedInstances_avgCPUPercent_policy_id
+    },
+    {
+      policyID = module.policy_definitions.appGateway_FailedRequests_policy_id
+    },
+    {
+      policyID = module.policy_definitions.appGateway_HealthyHostCount_policy_id
+    },
+    {
+      policyID = module.policy_definitions.appGateway_UnhealthyHostcount_policy_id
+    },
+    {
+      policyID = module.policy_definitions.appGateway_TotalRequests_policy_id
+    },
+    {
+      policyID = module.policy_definitions.appGateway_CpuUtilization_policy_id
+    },
+    {
+      policyID = module.policy_definitions.appGateway_ClientRtt_policy_id
+    },
+    {
+      policyID = module.policy_definitions.websvrfarm_CpuPercentage_policy_id
+    },
+    {
+      policyID = module.policy_definitions.websvrfarm_MemoryPercentage_policy_id
+    },
+    {
+      policyID = module.policy_definitions.website_AverageMemoryWorkingSet_policy_id
+    },
+    {
+      policyID = module.policy_definitions.website_AverageResponseTime_policy_id
+    },
+    {
+      policyID = module.policy_definitions.website_CpuTime_policy_id
+    },
+    {
+      policyID = module.policy_definitions.website_HealthCheckStatus_policy_id
+    },
+    {
+      policyID = module.policy_definitions.website_Http5xx_policy_id
+    },
+    {
+      policyID = module.policy_definitions.website_RequestsInApplicationQueue_policy_id
+    },
+    {
+      policyID = module.policy_definitions.websiteSlot_AverageMemoryWorkingSet_policy_id
+    },
+    {
+      policyID = module.policy_definitions.websiteSlot_AverageResponseTime_policy_id
+    },
+    {
+      policyID = module.policy_definitions.websiteSlot_CpuTime_policy_id
+    },
+    {
+      policyID = module.policy_definitions.websiteSlot_HealthCheckStatus_policy_id
+    },
+    {
+      policyID = module.policy_definitions.websiteSlot_Http5xx_policy_id
+    },
+    {
+      policyID = module.policy_definitions.websiteSlot_RequestsInApplicationQueue_policy_id
+    },
+    {
+      policyID = module.policy_definitions.azureFirewall_Health_policy_id
+    },
+    {
+      policyID = module.policy_definitions.loadBalancer_DipAvailability_policy_id
+    },
+    {
+      policyID = module.policy_definitions.loadBalancer_VipAvailability_policy_id
+    }
+  ]
 
   custom_policies_tag_governance = [
     {
@@ -151,6 +260,24 @@ module "policyset_definitions" {
       policyID = module.policy_definitions.inheritTagFromRG_policy_ids[5]
     },
     {
+      policyID = module.policy_definitions.inheritTagFromRGOverwriteExisting_policy_ids[0]
+    },
+    {
+      policyID = module.policy_definitions.inheritTagFromRGOverwriteExisting_policy_ids[1]
+    },
+    {
+      policyID = module.policy_definitions.inheritTagFromRGOverwriteExisting_policy_ids[2]
+    },
+    {
+      policyID = module.policy_definitions.inheritTagFromRGOverwriteExisting_policy_ids[3]
+    },
+    {
+      policyID = module.policy_definitions.inheritTagFromRGOverwriteExisting_policy_ids[4]
+    },
+    {
+      policyID = module.policy_definitions.inheritTagFromRGOverwriteExisting_policy_ids[5]
+    },
+    {
       policyID = module.policy_definitions.bulkInheritTagsFromRG_policy_id
     }
   ]
@@ -164,6 +291,7 @@ module "policyset_definitions" {
     }
   ]
 }
+
 ```
 
 ### Terraform plan & apply

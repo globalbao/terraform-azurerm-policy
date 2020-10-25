@@ -15,6 +15,7 @@ provider "azurerm" {
 module "policy_assignments" {
   source = "./modules/policy-assignments"
 
+  monitoring_governance_policyset_id      = module.policyset_definitions.monitoring_governance_policyset_id
   tag_governance_policyset_id             = module.policyset_definitions.tag_governance_policyset_id
   iam_governance_policyset_id             = module.policyset_definitions.iam_governance_policyset_id
   security_governance_policyset_id        = module.policyset_definitions.security_governance_policyset_id
@@ -28,6 +29,84 @@ module "policy_definitions" {
 
 module "policyset_definitions" {
   source = "./modules/policyset-definitions"
+
+  custom_policies_monitoring_governance = [
+    {
+      policyID = module.policy_definitions.sqlManagedInstances_ioRequests_policy_id
+    },
+    {
+      policyID = module.policy_definitions.sqlManagedInstances_avgCPUPercent_policy_id
+    },
+    {
+      policyID = module.policy_definitions.appGateway_FailedRequests_policy_id
+    },
+    {
+      policyID = module.policy_definitions.appGateway_HealthyHostCount_policy_id
+    },
+    {
+      policyID = module.policy_definitions.appGateway_UnhealthyHostcount_policy_id
+    },
+    {
+      policyID = module.policy_definitions.appGateway_TotalRequests_policy_id
+    },
+    {
+      policyID = module.policy_definitions.appGateway_CpuUtilization_policy_id
+    },
+    {
+      policyID = module.policy_definitions.appGateway_ClientRtt_policy_id
+    },
+    {
+      policyID = module.policy_definitions.websvrfarm_CpuPercentage_policy_id
+    },
+    {
+      policyID = module.policy_definitions.websvrfarm_MemoryPercentage_policy_id
+    },
+    {
+      policyID = module.policy_definitions.website_AverageMemoryWorkingSet_policy_id
+    },
+    {
+      policyID = module.policy_definitions.website_AverageResponseTime_policy_id
+    },
+    {
+      policyID = module.policy_definitions.website_CpuTime_policy_id
+    },
+    {
+      policyID = module.policy_definitions.website_HealthCheckStatus_policy_id
+    },
+    {
+      policyID = module.policy_definitions.website_Http5xx_policy_id
+    },
+    {
+      policyID = module.policy_definitions.website_RequestsInApplicationQueue_policy_id
+    },
+    {
+      policyID = module.policy_definitions.websiteSlot_AverageMemoryWorkingSet_policy_id
+    },
+    {
+      policyID = module.policy_definitions.websiteSlot_AverageResponseTime_policy_id
+    },
+    {
+      policyID = module.policy_definitions.websiteSlot_CpuTime_policy_id
+    },
+    {
+      policyID = module.policy_definitions.websiteSlot_HealthCheckStatus_policy_id
+    },
+    {
+      policyID = module.policy_definitions.websiteSlot_Http5xx_policy_id
+    },
+    {
+      policyID = module.policy_definitions.websiteSlot_RequestsInApplicationQueue_policy_id
+    },
+    {
+      policyID = module.policy_definitions.azureFirewall_Health_policy_id
+    },
+    {
+      policyID = module.policy_definitions.loadBalancer_DipAvailability_policy_id
+    },
+    {
+      policyID = module.policy_definitions.loadBalancer_VipAvailability_policy_id
+    }
+  ]
 
   custom_policies_tag_governance = [
     {

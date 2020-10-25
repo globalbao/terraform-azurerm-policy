@@ -4,6 +4,10 @@ variable "policyset_definition_category" {
   default     = "Custom"
 }
 
+variable "custom_policies_monitoring_governance" {
+  type = list(map(string))
+}
+
 variable "custom_policies_tag_governance" {
   type = list(map(string))
 }
@@ -39,7 +43,6 @@ variable "builtin_policies_security_governance" {
     "Gateway subnets should not be configured with a network security group",
     "Storage accounts should restrict network access",
     "Secure transfer to storage accounts should be enabled",
-    "Access through Internet facing endpoint should be restricted",
     "Storage accounts should allow access from trusted Microsoft services",
     "RDP access from the Internet should be blocked",
     "SSH access from the Internet should be blocked",

@@ -1,3 +1,26 @@
+resource "azurerm_policy_set_definition" "monitoring_governance" {
+
+  name         = "monitoring_governance"
+  policy_type  = "Custom"
+  display_name = "Monitoring Governance"
+  description  = "Contains common Monitoring Governance policies"
+
+  metadata = <<METADATA
+    {
+    "category": "${var.policyset_definition_category}"
+    }
+METADATA
+
+  dynamic "policy_definition_reference" {
+    for_each = var.custom_policies_monitoring_governance
+    content {
+      policy_definition_id = policy_definition_reference.value["policyID"]
+      reference_id         = policy_definition_reference.value["policyID"]
+    }
+  }
+}
+
+
 resource "azurerm_policy_set_definition" "tag_governance" {
 
   name         = "tag_governance"

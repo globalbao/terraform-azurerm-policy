@@ -1,3 +1,13 @@
+output "monitoring_governance_assignment_id" {
+  value       = azurerm_policy_assignment.monitoring_governance.id
+  description = "The policy assignment id for monitoring_governance"
+}
+
+output "monitoring_governance_assignment_identity" {
+  value       = azurerm_policy_assignment.monitoring_governance.identity
+  description = "The policy assignment identity for monitoring_governance"
+}
+
 output "tag_governance_assignment_id" {
   value       = azurerm_policy_assignment.tag_governance.id
   description = "The policy assignment id for tag_governance"

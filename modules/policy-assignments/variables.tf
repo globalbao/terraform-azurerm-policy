@@ -1,6 +1,11 @@
 data "azurerm_subscription" "current" {
 }
 
+variable "monitoring_governance_policyset_id" {
+  type        = string
+  description = "The policy set definition id for monitoring_governance"
+}
+
 variable "tag_governance_policyset_id" {
   type        = string
   description = "The policy set definition id for tag_governance"

@@ -1,3 +1,69 @@
+
+output "expressRouteCircuit_arpAvailability_policy_id" {
+  value       = azurerm_policy_definition.expressRouteCircuit_arpAvailability.id
+  description = "The policy definition id for expressRouteCircuit_arpAvailability"
+}
+
+output "expressRouteCircuit_bgpAvailability_policy_id" {
+  value       = azurerm_policy_definition.expressRouteCircuit_bgpAvailability.id
+  description = "The policy definition id for expressRouteCircuit_bgpAvailability"
+}
+
+output "expressRouteCircuit_bitsInPerSecond_policy_id" {
+  value       = azurerm_policy_definition.expressRouteCircuit_bitsInPerSecond.id
+  description = "The policy definition id for expressRouteCircuit_bitsInPerSecond"
+}
+
+output "expressRouteCircuit_bitsOutPerSecond_policy_id" {
+  value       = azurerm_policy_definition.expressRouteCircuit_bitsOutPerSecond.id
+  description = "The policy definition id for expressRouteCircuit_bitsOutPerSecond"
+}
+
+output "expressRouteCircuitPeer_bitsInPerSecond_policy_id" {
+  value       = azurerm_policy_definition.expressRouteCircuitPeer_bitsInPerSecond.id
+  description = "The policy definition id for expressRouteCircuitPeer_bitsInPerSecond"
+}
+
+output "expressRouteCircuitPeer_bitsOutPerSecond_policy_id" {
+  value       = azurerm_policy_definition.expressRouteCircuitPeer_bitsOutPerSecond.id
+  description = "The policy definition id for expressRouteCircuitPeer_bitsOutPerSecond"
+}
+
+output "expressRouteGateway_bitsInPerSecond_policy_id" {
+  value       = azurerm_policy_definition.expressRouteGateway_bitsInPerSecond.id
+  description = "The policy definition id for expressRouteGateway_bitsInPerSecond"
+}
+
+output "expressRouteGateway_bitsOutPerSecond_policy_id" {
+  value       = azurerm_policy_definition.expressRouteGateway_bitsOutPerSecond.id
+  description = "The policy definition id for expressRouteGateway_bitsOutPerSecond"
+}
+
+output "sqlServerDB_storagePercent_policy_id" {
+  value       = azurerm_policy_definition.sqlServerDB_storagePercent.id
+  description = "The policy definition id for sqlServerDB_storagePercent"
+}
+
+output "sqlServerDB_deadlock_policy_id" {
+  value       = azurerm_policy_definition.sqlServerDB_deadlock.id
+  description = "The policy definition id for sqlServerDB_deadlock"
+}
+
+output "sqlServerDB_cpuPercent_policy_id" {
+  value       = azurerm_policy_definition.sqlServerDB_cpuPercent.id
+  description = "The policy definition id for sqlServerDB_cpuPercent"
+}
+
+output "sqlServerDB_connectionFailed_policy_id" {
+  value       = azurerm_policy_definition.sqlServerDB_connectionFailed.id
+  description = "The policy definition id for sqlServerDB_connectionFailed"
+}
+
+output "sqlServerDB_blockedByFirewall_policy_id" {
+  value       = azurerm_policy_definition.sqlServerDB_blockedByFirewall.id
+  description = "The policy definition id for sqlServerDB_blockedByFirewall"
+}
+
 output "sqlManagedInstances_ioRequests_policy_id" {
   value       = azurerm_policy_definition.sqlManagedInstances_ioRequests.id
   description = "The policy definition id for sqlManagedInstances_ioRequests"
@@ -8,119 +74,119 @@ output "sqlManagedInstances_avgCPUPercent_policy_id" {
   description = "The policy definition id for sqlManagedInstances_avgCPUPercent"
 }
 
-output "appGateway_HealthyHostCount_policy_id" {
-  value       = azurerm_policy_definition.appGateway_HealthyHostCount.id
-  description = "The policy definition id for appGateway_HealthyHostCount"
+output "appGateway_healthyHostCount_policy_id" {
+  value       = azurerm_policy_definition.appGateway_healthyHostCount.id
+  description = "The policy definition id for appGateway_healthyHostCount"
 }
 
-output "appGateway_UnhealthyHostcount_policy_id" {
-  value       = azurerm_policy_definition.appGateway_UnhealthyHostcount.id
-  description = "The policy definition id for appGateway_UnhealthyHostcount"
+output "appGateway_unhealthyHostCount_policy_id" {
+  value       = azurerm_policy_definition.appGateway_unhealthyHostCount.id
+  description = "The policy definition id for appGateway_unhealthyHostCount"
 }
 
-output "appGateway_FailedRequests_policy_id" {
-  value       = azurerm_policy_definition.appGateway_FailedRequests.id
-  description = "The policy definition id for appGateway_FailedRequests"
+output "appGateway_failedRequests_policy_id" {
+  value       = azurerm_policy_definition.appGateway_failedRequests.id
+  description = "The policy definition id for appGateway_failedRequests"
 }
 
-output "appGateway_TotalRequests_policy_id" {
-  value       = azurerm_policy_definition.appGateway_TotalRequests.id
-  description = "The policy definition id for appGateway_TotalRequests"
+output "appGateway_totalRequests_policy_id" {
+  value       = azurerm_policy_definition.appGateway_totalRequests.id
+  description = "The policy definition id for appGateway_totalRequests"
 }
 
-output "appGateway_ClientRtt_policy_id" {
-  value       = azurerm_policy_definition.appGateway_ClientRtt.id
-  description = "The policy definition id for appGateway_ClientRtt"
+output "appGateway_clientRTT_policy_id" {
+  value       = azurerm_policy_definition.appGateway_clientRTT.id
+  description = "The policy definition id for appGateway_clientRTT"
 }
 
-output "appGateway_CpuUtilization_policy_id" {
-  value       = azurerm_policy_definition.appGateway_CpuUtilization.id
-  description = "The policy definition id for appGateway_CpuUtilization"
+output "appGateway_cpuUtilization_policy_id" {
+  value       = azurerm_policy_definition.appGateway_cpuUtilization.id
+  description = "The policy definition id for appGateway_cpuUtilization"
 }
 
-output "websvrfarm_CpuPercentage_policy_id" {
-  value       = azurerm_policy_definition.websvrfarm_CpuPercentage.id
-  description = "The policy definition id for websvrfarm_CpuPercentage"
+output "websvrfarm_cpuPercentage_policy_id" {
+  value       = azurerm_policy_definition.websvrfarm_cpuPercentage.id
+  description = "The policy definition id for websvrfarm_cpuPercentage"
 }
 
-output "websvrfarm_MemoryPercentage_policy_id" {
-  value       = azurerm_policy_definition.websvrfarm_MemoryPercentage.id
-  description = "The policy definition id for websvrfarm_MemoryPercentage"
+output "websvrfarm_memoryPercentage_policy_id" {
+  value       = azurerm_policy_definition.websvrfarm_memoryPercentage.id
+  description = "The policy definition id for websvrfarm_memoryPercentage"
 }
 
-output "website_AverageMemoryWorkingSet_policy_id" {
-  value       = azurerm_policy_definition.website_AverageMemoryWorkingSet.id
-  description = "The policy definition id for website_AverageMemoryWorkingSet"
+output "website_averageMemoryWorkingSet_policy_id" {
+  value       = azurerm_policy_definition.website_averageMemoryWorkingSet.id
+  description = "The policy definition id for website_averageMemoryWorkingSet"
 }
 
-output "website_AverageResponseTime_policy_id" {
-  value       = azurerm_policy_definition.website_AverageResponseTime.id
-  description = "The policy definition id for website_AverageResponseTime"
+output "website_averageResponseTime_policy_id" {
+  value       = azurerm_policy_definition.website_averageResponseTime.id
+  description = "The policy definition id for website_averageResponseTime"
 }
 
-output "website_CpuTime_policy_id" {
-  value       = azurerm_policy_definition.website_CpuTime.id
-  description = "The policy definition id for website_CpuTime"
+output "website_cpuTime_policy_id" {
+  value       = azurerm_policy_definition.website_cpuTime.id
+  description = "The policy definition id for website_cpuTime"
 }
 
-output "website_HealthCheckStatus_policy_id" {
-  value       = azurerm_policy_definition.website_HealthCheckStatus.id
-  description = "The policy definition id for website_HealthCheckStatus"
+output "website_healthCheckStatus_policy_id" {
+  value       = azurerm_policy_definition.website_healthCheckStatus.id
+  description = "The policy definition id for website_healthCheckStatus"
 }
 
-output "website_Http5xx_policy_id" {
-  value       = azurerm_policy_definition.website_Http5xx.id
-  description = "The policy definition id for website_Http5xx"
+output "website_http5xx_policy_id" {
+  value       = azurerm_policy_definition.website_http5xx.id
+  description = "The policy definition id for website_http5xx"
 }
 
-output "website_RequestsInApplicationQueue_policy_id" {
-  value       = azurerm_policy_definition.website_RequestsInApplicationQueue.id
-  description = "The policy definition id for website_RequestsInApplicationQueue"
+output "website_requestsInApplicationQueue_policy_id" {
+  value       = azurerm_policy_definition.website_requestsInApplicationQueue.id
+  description = "The policy definition id for website_requestsInApplicationQueue"
 }
 
-output "websiteSlot_AverageMemoryWorkingSet_policy_id" {
-  value       = azurerm_policy_definition.websiteSlot_AverageMemoryWorkingSet.id
-  description = "The policy definition id for websiteSlot_AverageMemoryWorkingSet"
+output "websiteSlot_averageMemoryWorkingSet_policy_id" {
+  value       = azurerm_policy_definition.websiteSlot_averageMemoryWorkingSet.id
+  description = "The policy definition id for websiteSlot_averageMemoryWorkingSet"
 }
 
-output "websiteSlot_AverageResponseTime_policy_id" {
-  value       = azurerm_policy_definition.websiteSlot_AverageResponseTime.id
-  description = "The policy definition id for websiteSlot_AverageResponseTime"
+output "websiteSlot_averageResponseTime_policy_id" {
+  value       = azurerm_policy_definition.websiteSlot_averageResponseTime.id
+  description = "The policy definition id for websiteSlot_averageResponseTime"
 }
 
-output "websiteSlot_CpuTime_policy_id" {
-  value       = azurerm_policy_definition.websiteSlot_CpuTime.id
-  description = "The policy definition id for websiteSlot_CpuTime"
+output "websiteSlot_cpuTime_policy_id" {
+  value       = azurerm_policy_definition.websiteSlot_cpuTime.id
+  description = "The policy definition id for websiteSlot_cpuTime"
 }
 
-output "websiteSlot_HealthCheckStatus_policy_id" {
-  value       = azurerm_policy_definition.websiteSlot_HealthCheckStatus.id
-  description = "The policy definition id for websiteSlot_HealthCheckStatus"
+output "websiteSlot_healthCheckStatus_policy_id" {
+  value       = azurerm_policy_definition.websiteSlot_healthCheckStatus.id
+  description = "The policy definition id for websiteSlot_healthCheckStatus"
 }
 
-output "websiteSlot_Http5xx_policy_id" {
-  value       = azurerm_policy_definition.websiteSlot_Http5xx.id
-  description = "The policy definition id for websiteSlot_Http5xx"
+output "websiteSlot_http5xx_policy_id" {
+  value       = azurerm_policy_definition.websiteSlot_http5xx.id
+  description = "The policy definition id for websiteSlot_http5xx"
 }
 
-output "websiteSlot_RequestsInApplicationQueue_policy_id" {
-  value       = azurerm_policy_definition.websiteSlot_RequestsInApplicationQueue.id
-  description = "The policy definition id for websiteSlot_RequestsInApplicationQueue"
+output "websiteSlot_requestsInApplicationQueue_policy_id" {
+  value       = azurerm_policy_definition.websiteSlot_requestsInApplicationQueue.id
+  description = "The policy definition id for websiteSlot_requestsInApplicationQueue"
 }
 
-output "azureFirewall_Health_policy_id" {
-  value       = azurerm_policy_definition.azureFirewall_Health.id
-  description = "The policy definition id for azureFirewall_Health"
+output "azureFirewall_health_policy_id" {
+  value       = azurerm_policy_definition.azureFirewall_health.id
+  description = "The policy definition id for azureFirewall_health"
 }
 
-output "loadBalancer_DipAvailability_policy_id" {
-  value       = azurerm_policy_definition.loadBalancer_DipAvailability.id
-  description = "The policy definition id for loadBalancer_DipAvailability"
+output "loadBalancer_dipAvailability_policy_id" {
+  value       = azurerm_policy_definition.loadBalancer_dipAvailability.id
+  description = "The policy definition id for loadBalancer_dipAvailability"
 }
 
-output "loadBalancer_VipAvailability_policy_id" {
-  value       = azurerm_policy_definition.loadBalancer_VipAvailability.id
-  description = "The policy definition id for loadBalancer_VipAvailability"
+output "loadBalancer_vipAvailability_policy_id" {
+  value       = azurerm_policy_definition.loadBalancer_vipAvailability.id
+  description = "The policy definition id for loadBalancer_vipAvailability"
 }
 
 output "addTagToRG_policy_ids" {

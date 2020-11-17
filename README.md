@@ -4,7 +4,7 @@
 
 Get in touch :octocat:
 
-* Twitter: [@GitBao](https://twitter.com/gitbao)
+* Twitter: [@coder_au](https://twitter.com/coder_au)
 * LinkedIn: [@JesseLoudon](https://www.linkedin.com/in/jesseloudon/)
 * Web: [jloudon.com](https://jloudon.com)
 * GitHub: [@JesseLoudon](https://github.com/jesseloudon)

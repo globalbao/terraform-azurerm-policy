@@ -1,0 +1,35 @@
+name: Terraform-Apply-CD
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+    
+jobs:
+
+  Terraform-Apply-CD:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    - uses: hashicorp/setup-terraform@v1.2.1
+      with:
+        cli_config_credentials_hostname: app.terraform.io
+        cli_config_credentials_token: ${{ secrets.tf_token }}
+        terraform_version: 0.13.4
+      
+    - name: Terraform fmt
+      id: fmt
+      run: terraform fmt -recursive
+
+    - name: Terraform Init
+      id: init
+      run: terraform init -no-color
+
+    - name: Terraform Validate
+      id: validate
+      run: terraform validate -no-color
+
+    - name: Terraform Apply
+      id: apply
+      run: terraform apply -auto-approve -no-color

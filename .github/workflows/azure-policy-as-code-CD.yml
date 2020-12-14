@@ -1,13 +1,15 @@
-name: Terraform-Apply-CD
+name: Azure-Policy-as-Code-CD
 on:
   push:
     branches: [ master ]
   pull_request:
     branches: [ master ]
+  schedule:
+  - cron: "0 0 * * *" #at the end of every day
     
 jobs:
 
-  Terraform-Apply-CD:
+  Azure-Policy-as-Code-CD:
     runs-on: ubuntu-latest
     
     steps:
@@ -24,7 +26,7 @@ jobs:
 
     - name: Terraform Init
       id: init
-      run: terraform init -no-color
+      run: terraform init -backend-config=https://gist.githubusercontent.com/jesseloudon/83ddbe494092ec3d90b0d6d7db41c38c/raw/216581f0240e0404977ec611b286247f75770181/backend.hcl -no-color
 
     - name: Terraform Validate
       id: validate

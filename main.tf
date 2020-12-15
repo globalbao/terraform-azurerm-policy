@@ -1,4 +1,6 @@
 terraform {
+  backend "remote" {
+  }
   required_version = ">= 0.13"
   required_providers {
     azurerm = {
@@ -8,7 +10,7 @@ terraform {
   }
 }
 
-provider "azurerm" { 
+provider "azurerm" {
   skip_provider_registration = true
   features {}
 }

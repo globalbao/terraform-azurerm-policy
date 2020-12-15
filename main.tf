@@ -1,4 +1,6 @@
 terraform {
+  backend "remote" {
+  }
   required_version = ">= 0.13"
   required_providers {
     azurerm = {
@@ -9,13 +11,7 @@ terraform {
 }
 
 provider "azurerm" {
-/*   
   skip_provider_registration = true
-  tenant_id       = "your tenant id"
-  subscription_id = "your subscription id"
-  client_id       = "your service principal appId"
-  client_secret   = "your service principal password" 
-*/
   features {}
 }
 

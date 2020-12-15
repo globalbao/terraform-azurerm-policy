@@ -1,6 +1,6 @@
 # AzureRM Policy - Terraform parent module
 
-![Lint Terraform](https://github.com/globalbao/terraform-azurerm-policy/workflows/Lint%20Terraform/badge.svg)
+![Azure-Policy-as-Code-CD](https://github.com/globalbao/terraform-azurerm-policy/workflows/Azure-Policy-as-Code-CD/badge.svg) ![Lint Terraform](https://github.com/globalbao/terraform-azurerm-policy/workflows/Lint%20Terraform/badge.svg)
 
 Get in touch :octocat:
 

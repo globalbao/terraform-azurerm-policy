@@ -16,8 +16,7 @@ jobs:
     - uses: actions/checkout@v2
     - uses: hashicorp/setup-terraform@v1.2.1
       with:
-        cli_config_credentials_hostname: app.terraform.io
-        cli_config_credentials_token: ${{ secrets.tf_token }}
+        cli_config_credentials_token: ${{ secrets.TF_TOKEN }}
         terraform_version: 0.13.4
       
     - name: Terraform fmt
@@ -31,6 +30,10 @@ jobs:
     - name: Terraform Validate
       id: validate
       run: terraform validate -no-color
+
+    - name: Terraform Plan
+      id: plan
+      run: terraform plan -no-color
 
     - name: Terraform Apply
       id: apply

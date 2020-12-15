@@ -14,6 +14,9 @@ jobs:
     
     steps:
     - uses: actions/checkout@v2
+    - uses: azure/login@v1.1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
     - uses: hashicorp/setup-terraform@v1.2.1
       with:
         cli_config_credentials_token: ${{ secrets.TF_TOKEN }}
@@ -30,10 +33,6 @@ jobs:
     - name: Terraform Validate
       id: validate
       run: terraform validate -no-color
-
-    - name: Terraform Plan
-      id: plan
-      run: terraform plan -no-color
 
     - name: Terraform Apply
       id: apply

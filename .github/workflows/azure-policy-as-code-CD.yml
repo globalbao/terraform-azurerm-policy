@@ -29,7 +29,7 @@ jobs:
 
     - name: Terraform Init
       id: init
-      run: terraform init -backend-config=https://gist.githubusercontent.com/jesseloudon/83ddbe494092ec3d90b0d6d7db41c38c/raw/216581f0240e0404977ec611b286247f75770181/backend.hcl -no-color
+      run: terraform init -backend-config=backend.hcl -no-color
 
     - name: Terraform Validate
       id: validate

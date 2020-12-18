@@ -34,7 +34,6 @@ Learning resources :books:
 |Module                  | Resource Type                 | Resource name                          | Deployment Count
 |:-----------------------|:------------------------------|:---------------------------------------|:-----
 | policy_definitions     | azurerm_policy_definition     | `addTagToRG`                             | 6
-| policy_definitions     | azurerm_policy_definition     | `addTagToRG`                             | 6
 | policy_definitions     | azurerm_policy_definition     | `inheritTagFromRG`                       | 6
 | policy_definitions     | azurerm_policy_definition     | `inheritTagFromRGOverwriteExisting`      | 6
 | policy_definitions     | azurerm_policy_definition     | `bulkInheritTagsFromRG`                  | 1

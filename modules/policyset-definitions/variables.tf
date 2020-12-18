@@ -56,7 +56,7 @@ variable "builtin_policies_security_governance" {
     "Automation account variables should be encrypted",
     "Azure subscriptions should have a log profile for Activity Log",
     "Email notification to subscription owner for high severity alerts should be enabled",
-    "A security contact email address should be provided for your subscription",
+    "Subscriptions should have a contact email address for security issues",
     "Enable Azure Security Center on your subscription"
   ]
 }
